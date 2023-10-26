@@ -1,0 +1,2437 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>SpringBoot3 | X</title><meta name="author" content="Xiamou"><meta name="copyright" content="Xiamou"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="SpringBoot3 全栈指南教程——尚硅谷学习笔记 2023 年 SpringBoot3 全栈指南教程——尚硅谷学习笔记 2023 年 一、Spring Boot 3-核心特性 第 1 章 SpringBoot3-快速入门 1.1 简介 1.1.1 前置知识 1.1.2 环境要求 1.1.3 SpringBoot 是什么   1.2 快速体验 1.2.1 开发流程 1.2.1.1 创建项目 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot3">
+<meta property="og:url" content="http://example.com/2023/10/09/SpringBoot3%20%E5%85%A8%E6%A0%88%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202023%E5%B9%B4/index.html">
+<meta property="og:site_name" content="X">
+<meta property="og:description" content="SpringBoot3 全栈指南教程——尚硅谷学习笔记 2023 年 SpringBoot3 全栈指南教程——尚硅谷学习笔记 2023 年 一、Spring Boot 3-核心特性 第 1 章 SpringBoot3-快速入门 1.1 简介 1.1.1 前置知识 1.1.2 环境要求 1.1.3 SpringBoot 是什么   1.2 快速体验 1.2.1 开发流程 1.2.1.1 创建项目 1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80">
+<meta property="article:published_time" content="2023-10-09T11:25:30.000Z">
+<meta property="article:modified_time" content="2023-10-09T12:41:36.906Z">
+<meta property="article:author" content="Xiamou">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Springboot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="http://example.com/2023/10/09/SpringBoot3%20%E5%85%A8%E6%A0%88%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202023%E5%B9%B4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'SpringBoot3',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-09 20:41:36'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://reggie-xiamou.oss-cn-beijing.aliyuncs.com/other/QQ%E5%9B%BE%E7%89%8720230721130300.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80')"><nav id="nav"><span id="blog-info"><a href="/" title="X"><span class="site-name">X</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">SpringBoot3</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-09T11:25:30.000Z" title="发表于 2023-10-09 19:25:30">2023-10-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-09T12:41:36.906Z" title="更新于 2023-10-09 20:41:36">2023-10-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">13.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>56分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="SpringBoot3"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="SpringBoot3-全栈指南教程——尚硅谷学习笔记-2023-年"><a href="#SpringBoot3-全栈指南教程——尚硅谷学习笔记-2023-年" class="headerlink" title="SpringBoot3 全栈指南教程——尚硅谷学习笔记 2023 年"></a>SpringBoot3 全栈指南教程——尚硅谷学习笔记 2023 年</h1><ul>
+<li><a href="#springboot3-%E5%85%A8%E6%A0%88%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2023-%E5%B9%B4">SpringBoot3 全栈指南教程——尚硅谷学习笔记 2023 年</a></li>
+<li><a href="#%E4%B8%80-spring-boot-3-%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7">一、Spring Boot 3-核心特性</a><ul>
+<li><a href="#%E7%AC%AC-1-%E7%AB%A0-springboot3-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8">第 1 章 SpringBoot3-快速入门</a><ul>
+<li><a href="#11-%E7%AE%80%E4%BB%8B">1.1 简介</a><ul>
+<li><a href="#111-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86">1.1.1 前置知识</a></li>
+<li><a href="#112-%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82">1.1.2 环境要求</a></li>
+<li><a href="#113-springboot-%E6%98%AF%E4%BB%80%E4%B9%88">1.1.3 SpringBoot 是什么</a></li>
+</ul>
+</li>
+<li><a href="#12-%E5%BF%AB%E9%80%9F%E4%BD%93%E9%AA%8C">1.2 快速体验</a><ul>
+<li><a href="#121-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B">1.2.1 开发流程</a><ul>
+<li><a href="#1211-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE">1.2.1.1 创建项目</a></li>
+<li><a href="#1212-%E5%AF%BC%E5%85%A5%E5%9C%BA%E6%99%AF">1.2.1.2 导入场景</a></li>
+<li><a href="#1213-%E4%B8%BB%E7%A8%8B%E5%BA%8F">1.2.1.3 主程序</a></li>
+<li><a href="#1214-%E4%B8%9A%E5%8A%A1">1.2.1.4 业务</a></li>
+<li><a href="#1215-%E6%B5%8B%E8%AF%95">1.2.1.5 测试</a></li>
+<li><a href="#1216-%E6%89%93%E5%8C%85">1.2.1.6 打包</a></li>
+</ul>
+</li>
+<li><a href="#122-%E7%89%B9%E6%80%A7%E5%B0%8F%E7%BB%93">1.2.2 特性小结</a><ul>
+<li><a href="#1221-%E7%AE%80%E5%8C%96%E6%95%B4%E5%90%88">1.2.2.1 简化整合</a></li>
+<li><a href="#1222-%E7%AE%80%E5%8C%96%E5%BC%80%E5%8F%91">1.2.2.2 简化开发</a></li>
+<li><a href="#1223-%E7%AE%80%E5%8C%96%E9%85%8D%E7%BD%AE">1.2.2.3 简化配置</a></li>
+<li><a href="#1224-%E7%AE%80%E5%8C%96%E9%83%A8%E7%BD%B2">1.2.2.4 简化部署</a></li>
+<li><a href="#1225-%E7%AE%80%E5%8C%96%E8%BF%90%E7%BB%B4">1.2.2.5 简化运维</a></li>
+<li><a href="#1226-spring-initializr-%E5%88%9B%E5%BB%BA%E5%90%91%E5%AF%BC">1.2.2.6 Spring Initializr 创建向导</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#13-%E5%BA%94%E7%94%A8%E5%88%86%E6%9E%90">1.3 应用分析</a><ul>
+<li><a href="#131-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6">1.3.1 依赖管理机制</a></li>
+<li><a href="#132-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E6%9C%BA%E5%88%B6">1.3.2 自动配置机制</a><ul>
+<li><a href="#1321-%E5%88%9D%E6%AD%A5%E7%90%86%E8%A7%A3">1.3.2.1 初步理解</a></li>
+<li><a href="#1322-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B">1.3.2.2 完整流程</a></li>
+<li><a href="#1323-%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD-springboot">1.3.2.3 如何学好 SpringBoot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#14-%E6%A0%B8%E5%BF%83%E6%8A%80%E8%83%BD">1.4 核心技能</a><ul>
+<li><a href="#141-%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3">1.4.1 常用注解</a><ul>
+<li><a href="#1411-%E7%BB%84%E4%BB%B6%E6%B3%A8%E5%86%8C">1.4.1.1 组件注册</a></li>
+<li><a href="#1412-%E6%9D%A1%E4%BB%B6%E6%B3%A8%E8%A7%A3">1.4.1.2 条件注解</a></li>
+<li><a href="#1413-%E5%B1%9E%E6%80%A7%E7%BB%91%E5%AE%9A">1.4.1.3 属性绑定</a></li>
+</ul>
+</li>
+<li><a href="#142-yaml-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">1.4.2 YAML 配置文件</a><ul>
+<li><a href="#1421-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95">1.4.2.1. 基本语法</a></li>
+<li><a href="#1422-%E7%A4%BA%E4%BE%8B">1.4.2.2 示例</a></li>
+<li><a href="#1423-%E7%BB%86%E8%8A%82">1.4.2.3 细节</a></li>
+<li><a href="#1424-%E5%B0%8F%E6%8A%80%E5%B7%A7lombok">1.4.2.4. 小技巧：lombok</a></li>
+</ul>
+</li>
+<li><a href="#143-%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE">1.4.3 日志配置</a><ul>
+<li><a href="#1431-%E7%AE%80%E4%BB%8B">1.4.3.1 简介</a></li>
+<li><a href="#1432-%E6%97%A5%E5%BF%97%E6%A0%BC%E5%BC%8F">1.4.3.2 日志格式</a></li>
+<li><a href="#1433-%E8%AE%B0%E5%BD%95%E6%97%A5%E5%BF%97">1.4.3.3 记录日志</a></li>
+<li><a href="#1434-%E6%97%A5%E5%BF%97%E7%BA%A7%E5%88%AB">1.4.3.4 日志级别</a></li>
+<li><a href="#1435-%E6%97%A5%E5%BF%97%E5%88%86%E7%BB%84">1.4.3.5 日志分组</a></li>
+<li><a href="#1436-%E6%96%87%E4%BB%B6%E8%BE%93%E5%87%BA">1.4.3.6 文件输出</a></li>
+<li><a href="#1437-%E6%96%87%E4%BB%B6%E5%BD%92%E6%A1%A3%E4%B8%8E%E6%BB%9A%E5%8A%A8%E5%88%87%E5%89%B2">1.4.3.7 文件归档与滚动切割</a></li>
+<li><a href="#1438-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE">1.4.3.8 自定义配置</a></li>
+<li><a href="#1439-%E5%88%87%E6%8D%A2%E6%97%A5%E5%BF%97%E7%BB%84%E5%90%88">1.4.3.9 切换日志组合</a></li>
+<li><a href="#14310-%E6%9C%80%E4%BD%B3%E5%AE%9E%E6%88%98">1.4.3.10 最佳实战</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC-2-%E7%AB%A0-springboot3-web-%E5%BC%80%E5%8F%91">第 2 章 SpringBoot3-Web 开发</a><ul>
+<li><a href="#21-webmvcautoconfiguration-%E5%8E%9F%E7%90%86">2.1 WebMvcAutoConfiguration 原理</a><ul>
+<li><a href="#211-%E7%94%9F%E6%95%88%E6%9D%A1%E4%BB%B6">2.1.1 生效条件</a></li>
+<li><a href="#212-%E6%95%88%E6%9E%9C">2.1.2 效果</a></li>
+<li><a href="#213-webmvcconfigurer-%E6%8E%A5%E5%8F%A3">2.1.3 WebMvcConfigurer 接口</a></li>
+<li><a href="#214-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%A7%84%E5%88%99%E6%BA%90%E7%A0%81">2.1.4 静态资源规则源码</a></li>
+<li><a href="#215-enablewebmvcconfiguration-%E6%BA%90%E7%A0%81">2.1.5 EnableWebMvcConfiguration 源码</a></li>
+<li><a href="#216-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%94%BE%E4%B8%80%E4%B8%AA-webmvcconfigurer-%E5%B0%B1%E8%83%BD%E9%85%8D%E7%BD%AE%E5%BA%95%E5%B1%82%E8%A1%8C%E4%B8%BA">2.1.6 为什么容器中放一个 WebMvcConfigurer 就能配置底层行为</a></li>
+<li><a href="#217-webmvcconfigurationsupport">2.1.7 WebMvcConfigurationSupport</a></li>
+</ul>
+</li>
+<li><a href="#22-web-%E5%9C%BA%E6%99%AF">2.2 Web 场景</a><ul>
+<li><a href="#221-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE">2.2.1 自动配置</a></li>
+<li><a href="#222-%E9%BB%98%E8%AE%A4%E6%95%88%E6%9E%9C">2.2.2 默认效果</a></li>
+</ul>
+</li>
+<li><a href="#23-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">2.3 静态资源</a><ul>
+<li><a href="#231-%E9%BB%98%E8%AE%A4%E8%A7%84%E5%88%99">2.3.1 默认规则</a><ul>
+<li><a href="#2311-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84">2.3.1.1 静态资源映射</a></li>
+<li><a href="#2312-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98">2.3.1.2 静态资源缓存</a></li>
+<li><a href="#2313-%E6%AC%A2%E8%BF%8E%E9%A1%B5">2.3.1.3 欢迎页</a></li>
+<li><a href="#2314-favicon">2.3.1.4 Favicon</a></li>
+<li><a href="#2315-%E7%BC%93%E5%AD%98%E5%AE%9E%E9%AA%8C">2.3.1.5 缓存实验</a></li>
+</ul>
+</li>
+<li><a href="#232-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%A7%84%E5%88%99">2.3.2 自定义静态资源规则</a><ul>
+<li><a href="#2321-%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F">2.3.2.1 配置方式</a></li>
+<li><a href="#2322-%E4%BB%A3%E7%A0%81%E6%96%B9%E5%BC%8F">2.3.2.2 代码方式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#24-%E8%B7%AF%E5%BE%84%E5%8C%B9%E9%85%8D">2.4 路径匹配</a><ul>
+<li><a href="#241-ant-%E9%A3%8E%E6%A0%BC%E8%B7%AF%E5%BE%84%E7%94%A8%E6%B3%95">2.4.1 Ant 风格路径用法</a></li>
+<li><a href="#242-%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2">2.4.2 模式切换</a></li>
+</ul>
+</li>
+<li><a href="#25-%E5%86%85%E5%AE%B9%E5%8D%8F%E5%95%86">2.5 内容协商</a><ul>
+<li><a href="#251-%E5%A4%9A%E7%AB%AF%E5%86%85%E5%AE%B9%E9%80%82%E9%85%8D">2.5.1 多端内容适配</a><ul>
+<li><a href="#2511-%E9%BB%98%E8%AE%A4%E8%A7%84%E5%88%99">2.5.1.1 默认规则</a></li>
+<li><a href="#2512-%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA">2.5.1.2 效果演示</a></li>
+<li><a href="#2513-%E9%85%8D%E7%BD%AE%E5%8D%8F%E5%95%86%E8%A7%84%E5%88%99%E4%B8%8E%E6%94%AF%E6%8C%81%E7%B1%BB%E5%9E%8B">2.5.1.3 配置协商规则与支持类型</a></li>
+</ul>
+</li>
+<li><a href="#252-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%86%85%E5%AE%B9%E8%BF%94%E5%9B%9E">2.5.2 自定义内容返回</a><ul>
+<li><a href="#2521-%E5%A2%9E%E5%8A%A0-yaml-%E8%BF%94%E5%9B%9E%E6%94%AF%E6%8C%81">2.5.2.1 增加 yaml 返回支持</a></li>
+<li><a href="#2522-%E6%80%9D%E8%80%83%E5%A6%82%E4%BD%95%E5%A2%9E%E5%8A%A0%E5%85%B6%E4%BB%96">2.5.2.2 思考：如何增加其他</a></li>
+<li><a href="#2523-httpmessageconverter-%E7%9A%84%E7%A4%BA%E4%BE%8B%E5%86%99%E6%B3%95">2.5.2.3 HttpMessageConverter 的示例写法</a></li>
+</ul>
+</li>
+<li><a href="#253-%E5%86%85%E5%AE%B9%E5%8D%8F%E5%95%86%E5%8E%9F%E7%90%86-httpmessageconverter">2.5.3 内容协商原理 HttpMessageConverter</a><ul>
+<li><a href="#2531-responsebody-%E7%94%B1-httpmessageconverter-%E5%A4%84%E7%90%86">2.5.3.1 @ResponseBody 由 HttpMessageConverter 处理</a></li>
+<li><a href="#2532-webmvcautoconfiguration-%E6%8F%90%E4%BE%9B%E5%87%A0%E7%A7%8D%E9%BB%98%E8%AE%A4-httpmessageconverters">2.5.3.2 WebMvcAutoConfiguration 提供几种默认 HttpMessageConverters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#26-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E">2.6 模板引擎</a><ul>
+<li><a href="#261-thymeleaf-%E6%95%B4%E5%90%88">2.6.1 Thymeleaf 整合</a></li>
+<li><a href="#262-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">2.6.2 基础语法</a><ul>
+<li><a href="#2621-%E6%A0%B8%E5%BF%83%E7%94%A8%E6%B3%95">2.6.2.1 核心用法</a></li>
+<li><a href="#2622-%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B">2.6.2.2 语法示例</a></li>
+<li><a href="#2623-%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE">2.6.2.3 属性设置</a></li>
+<li><a href="#2624-%E9%81%8D%E5%8E%86">2.6.2.4 遍历</a></li>
+<li><a href="#2625-%E5%88%A4%E6%96%AD">2.6.2.5 判断</a></li>
+<li><a href="#2626-%E5%B1%9E%E6%80%A7%E4%BC%98%E5%85%88%E7%BA%A7">2.6.2.6 属性优先级</a></li>
+<li><a href="#2627-%E8%A1%8C%E5%86%85%E5%86%99%E6%B3%95">2.6.2.7 行内写法</a></li>
+<li><a href="#2628-%E5%8F%98%E9%87%8F%E9%80%89%E6%8B%A9">2.6.2.8 变量选择</a></li>
+<li><a href="#2629-%E6%A8%A1%E6%9D%BF%E5%B8%83%E5%B1%80">2.6.2.9 模板布局</a></li>
+<li><a href="#26210-devtools">2.6.2.10 devtools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#27-%E5%9B%BD%E9%99%85%E5%8C%96">2.7 国际化</a></li>
+<li><a href="#28-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86">2.8 错误处理</a><ul>
+<li><a href="#281-%E9%BB%98%E8%AE%A4%E6%9C%BA%E5%88%B6">2.8.1 默认机制</a></li>
+<li><a href="#282-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94">2.8.2 自定义错误响应</a><ul>
+<li><a href="#2821-%E8%87%AA%E5%AE%9A%E4%B9%89-json-%E5%93%8D%E5%BA%94">2.8.2.1 自定义 json 响应</a></li>
+<li><a href="#2822-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E5%93%8D%E5%BA%94">2.8.2.2 自定义页面响应</a></li>
+</ul>
+</li>
+<li><a href="#283-%E6%9C%80%E4%BD%B3%E5%AE%9E%E6%88%98">2.8.3 最佳实战</a></li>
+</ul>
+</li>
+<li><a href="#29-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AE%B9%E5%99%A8">2.9 嵌入式容器</a><ul>
+<li><a href="#291-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86">2.9.1 自动配置原理</a></li>
+<li><a href="#292-%E8%87%AA%E5%AE%9A%E4%B9%89">2.9.2 自定义</a></li>
+<li><a href="#293-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">2.9.3 最佳实践</a></li>
+</ul>
+</li>
+<li><a href="#210-%E5%85%A8%E9%9D%A2%E6%8E%A5%E7%AE%A1-springmvc">2.10 全面接管 SpringMVC</a><ul>
+<li><a href="#2101-webmvcautoconfiguration-%E5%88%B0%E5%BA%95%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E4%BA%86%E5%93%AA%E4%BA%9B%E8%A7%84%E5%88%99">2.10.1 WebMvcAutoConfiguration 到底自动配置了哪些规则</a></li>
+<li><a href="#2102-enablewebmvc-%E7%A6%81%E7%94%A8%E9%BB%98%E8%AE%A4%E8%A1%8C%E4%B8%BA">2.10.2 @EnableWebMvc 禁用默认行为</a></li>
+<li><a href="#2103-webmvcconfigurer-%E5%8A%9F%E8%83%BD">2.10.3 WebMvcConfigurer 功能</a></li>
+</ul>
+</li>
+<li><a href="#211-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">2.11 最佳实践</a><ul>
+<li><a href="#2111-%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F">2.11.1 三种方式</a></li>
+<li><a href="#2112-%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F">2.11.2 两种模式</a></li>
+</ul>
+</li>
+<li><a href="#212-web-%E6%96%B0%E7%89%B9%E6%80%A7">2.12 Web 新特性</a><ul>
+<li><a href="#2121-problemdetails">2.12.1 Problemdetails</a></li>
+<li><a href="#2122-%E5%87%BD%E6%95%B0%E5%BC%8F-web">2.12.2 函数式 Web</a><ul>
+<li><a href="#21221-%E5%9C%BA%E6%99%AF">2.12.2.1 场景</a></li>
+<li><a href="#21222-%E6%A0%B8%E5%BF%83%E7%B1%BB">2.12.2.2 核心类</a></li>
+<li><a href="#21223-%E7%A4%BA%E4%BE%8B">2.12.2.3 示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC-3-%E7%AB%A0-springboot3-%E6%95%B0%E6%8D%AE%E8%AE%BF%E9%97%AE">第 3 章 SpringBoot3-数据访问</a><ul>
+<li><a href="#31-%E5%88%9B%E5%BB%BA-ssm-%E6%95%B4%E5%90%88%E9%A1%B9%E7%9B%AE">3.1 创建 SSM 整合项目</a></li>
+<li><a href="#32-%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E6%BA%90">3.2 配置数据源</a></li>
+<li><a href="#33-%E9%85%8D%E7%BD%AE-mybatis">3.3 配置 MyBatis</a></li>
+<li><a href="#34-crud-%E7%BC%96%E5%86%99">3.4 CRUD 编写</a></li>
+<li><a href="#35-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86">3.5 自动配置原理</a></li>
+<li><a href="#36-%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%85%8D%E7%BD%AE">3.6 快速定位生效的配置</a></li>
+<li><a href="#37-%E6%89%A9%E5%B1%95%E6%95%B4%E5%90%88%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E6%BA%90">3.7 扩展：整合其他数据源</a><ul>
+<li><a href="#371-druid-%E6%95%B0%E6%8D%AE%E6%BA%90">3.7.1 Druid 数据源</a></li>
+</ul>
+</li>
+<li><a href="#38-%E9%99%84%E5%BD%95%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93">3.8 附录：示例数据库</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC-4-%E7%AB%A0-springboot3-%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7">第 4 章 SpringBoot3-基础特性</a><ul>
+<li><a href="#41-springapplication">4.1 SpringApplication</a><ul>
+<li><a href="#411-%E8%87%AA%E5%AE%9A%E4%B9%89-banner">4.1.1 自定义 banner</a></li>
+<li><a href="#412-%E8%87%AA%E5%AE%9A%E4%B9%89-springapplication">4.1.2 自定义 SpringApplication</a></li>
+<li><a href="#413-fluentbuilder-api">4.1.3 FluentBuilder API</a></li>
+</ul>
+</li>
+<li><a href="#42-profiles">4.2 Profiles</a><ul>
+<li><a href="#421-%E4%BD%BF%E7%94%A8">4.2.1 使用</a><ul>
+<li><a href="#4211-%E6%8C%87%E5%AE%9A%E7%8E%AF%E5%A2%83">4.2.1.1 指定环境</a></li>
+<li><a href="#4212-%E7%8E%AF%E5%A2%83%E6%BF%80%E6%B4%BB">4.2.1.2 环境激活</a></li>
+<li><a href="#4213-%E7%8E%AF%E5%A2%83%E5%8C%85%E5%90%AB">4.2.1.3 环境包含</a></li>
+</ul>
+</li>
+<li><a href="#422-profile-%E5%88%86%E7%BB%84">4.2.2 Profile 分组</a></li>
+<li><a href="#423-profile-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">4.2.3 Profile 配置文件</a></li>
+</ul>
+</li>
+<li><a href="#43-%E5%A4%96%E9%83%A8%E5%8C%96%E9%85%8D%E7%BD%AE">4.3 外部化配置</a><ul>
+<li><a href="#431-%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7">4.3.1 配置优先级</a></li>
+<li><a href="#432-%E5%A4%96%E9%83%A8%E9%85%8D%E7%BD%AE">4.3.2 外部配置</a></li>
+<li><a href="#433-%E5%AF%BC%E5%85%A5%E9%85%8D%E7%BD%AE">4.3.3 导入配置</a></li>
+<li><a href="#434-%E5%B1%9E%E6%80%A7%E5%8D%A0%E4%BD%8D%E7%AC%A6">4.3.4 属性占位符</a></li>
+</ul>
+</li>
+<li><a href="#44-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95-junit5">4.4 单元测试 JUnit5</a><ul>
+<li><a href="#441-%E6%95%B4%E5%90%88">4.4.1 整合</a></li>
+<li><a href="#442-%E6%B5%8B%E8%AF%95">4.4.2 测试</a><ul>
+<li><a href="#4421-%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95">4.4.2.1 组件测试</a></li>
+<li><a href="#4422-%E6%B3%A8%E8%A7%A3">4.4.2.2 注解</a></li>
+<li><a href="#4423-%E6%96%AD%E8%A8%80">4.4.2.3 断言</a></li>
+<li><a href="#4424-%E5%B5%8C%E5%A5%97%E6%B5%8B%E8%AF%95">4.4.2.4 嵌套测试</a></li>
+<li><a href="#4425-%E5%8F%82%E6%95%B0%E5%8C%96%E6%B5%8B%E8%AF%95">4.4.2.5 参数化测试</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC-5-%E7%AB%A0-springboot3-%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86">第 5 章 SpringBoot3-核心原理</a><ul>
+<li><a href="#51-%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%9B%91%E5%90%AC%E5%99%A8">5.1 事件和监听器</a><ul>
+<li><a href="#511-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9B%91%E5%90%AC">5.1.1 生命周期监听</a><ul>
+<li><a href="#5111-%E7%9B%91%E5%90%AC%E5%99%A8-springapplicationrunlistener">5.1.1.1 监听器 SpringApplicationRunListener</a></li>
+<li><a href="#5112-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%85%A8%E6%B5%81%E7%A8%8B">5.1.1.2 生命周期全流程</a></li>
+</ul>
+</li>
+<li><a href="#512-%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91%E6%97%B6%E6%9C%BA">5.1.2 事件触发时机</a><ul>
+<li><a href="#5121-%E5%90%84%E7%A7%8D%E5%9B%9E%E8%B0%83%E7%9B%91%E5%90%AC%E5%99%A8">5.1.2.1 各种回调监听器</a></li>
+<li><a href="#5122-%E5%AE%8C%E6%95%B4%E8%A7%A6%E5%8F%91%E6%B5%81%E7%A8%8B">5.1.2.2 完整触发流程</a></li>
+<li><a href="#5123-springboot-%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91">5.1.2.3 SpringBoot 事件驱动开发</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#52-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86">5.2 自动配置原理</a><ul>
+<li><a href="#521-%E5%85%A5%E9%97%A8%E7%90%86%E8%A7%A3">5.2.1 入门理解</a><ul>
+<li><a href="#5211-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B">5.2.1.1 自动配置流程</a></li>
+<li><a href="#5212-spi-%E6%9C%BA%E5%88%B6">5.2.1.2 SPI 机制</a></li>
+<li><a href="#5213-%E5%8A%9F%E8%83%BD%E5%BC%80%E5%85%B3">5.2.1.3 功能开关</a></li>
+</ul>
+</li>
+<li><a href="#522-%E8%BF%9B%E9%98%B6%E7%90%86%E8%A7%A3">5.2.2 进阶理解</a><ul>
+<li><a href="#5221-springbootapplication">5.2.2.1 @SpringBootApplication</a></li>
+<li><a href="#5222-%E5%AE%8C%E6%95%B4%E5%90%AF%E5%8A%A8%E5%8A%A0%E8%BD%BD%E6%B5%81%E7%A8%8B">5.2.2.2 完整启动加载流程</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#53-%E8%87%AA%E5%AE%9A%E4%B9%89-starter">5.3 自定义 starter</a><ul>
+<li><a href="#531-%E4%B8%9A%E5%8A%A1%E4%BB%A3%E7%A0%81">5.3.1 业务代码</a></li>
+<li><a href="#532-%E5%9F%BA%E6%9C%AC%E6%8A%BD%E5%8F%96">5.3.2 基本抽取</a></li>
+<li><a href="#533-%E4%BD%BF%E7%94%A8enablexxx-%E6%9C%BA%E5%88%B6">5.3.3 使用@EnableXxx 机制</a></li>
+<li><a href="#534-%E5%AE%8C%E5%85%A8%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE">5.3.4 完全自动配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+
+<h1 id="一、Spring-Boot-3-核心特性"><a href="#一、Spring-Boot-3-核心特性" class="headerlink" title="一、Spring Boot 3-核心特性"></a>一、Spring Boot 3-核心特性</h1><h2 id="第-1-章-SpringBoot3-快速入门"><a href="#第-1-章-SpringBoot3-快速入门" class="headerlink" title="第 1 章 SpringBoot3-快速入门"></a>第 1 章 SpringBoot3-快速入门</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><h4 id="1-1-1-前置知识"><a href="#1-1-1-前置知识" class="headerlink" title="1.1.1 前置知识"></a>1.1.1 前置知识</h4><ul>
+<li><p>Java17</p>
+</li>
+<li><p>Spring、SpringMVC、MyBatis</p>
+</li>
+<li><p>Maven、IDEA</p>
+</li>
+</ul>
+<h4 id="1-1-2-环境要求"><a href="#1-1-2-环境要求" class="headerlink" title="1.1.2 环境要求"></a>1.1.2 环境要求</h4><table>
+<thead>
+<tr>
+<th><strong>环境&amp;工具</strong></th>
+<th><strong>版本</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SpringBoot</td>
+<td>3.1.3+</td>
+</tr>
+<tr>
+<td>IDEA</td>
+<td>2022.3.3+</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>17+</td>
+</tr>
+<tr>
+<td>Maven</td>
+<td>3.8.1+</td>
+</tr>
+<tr>
+<td>Tomcat</td>
+<td>10.1.12+</td>
+</tr>
+<tr>
+<td>Servlet</td>
+<td>5.0.0+</td>
+</tr>
+<tr>
+<td>GraalVM Community</td>
+<td>22.3+</td>
+</tr>
+<tr>
+<td>Native Build Tools</td>
+<td>0.9.19+</td>
+</tr>
+</tbody></table>
+<h4 id="1-1-3-SpringBoot-是什么"><a href="#1-1-3-SpringBoot-是什么" class="headerlink" title="1.1.3 SpringBoot 是什么"></a>1.1.3 SpringBoot 是什么</h4><p>SpringBoot 帮我们简单、快速地创建一个独立的、生产级别的 <strong>Spring 应用</strong> <strong>（说明：SpringBoot 底层是 Spring）</strong>。</p>
+<p>大多数 SpringBoot 应用只需要编写少量配置即可快速整合 Spring 平台以及第三方技术。</p>
+<p><strong>特性</strong>：</p>
+<ul>
+<li><p><code>快速创建</code>独立 Spring 应用。</p>
+<ul>
+<li>SSM：导包、配置、启动运行。</li>
+</ul>
+</li>
+<li><p>直接<code>嵌入</code> Tomcat、Jetty 或 Undertow（无需部署 war 包）【Servlet 容器】。</p>
+<ul>
+<li><p>Linux、Java、Tomcat、MySQL：war 放到 Tomcat 的 webapps 下。</p>
+</li>
+<li><p>jar、Java 环境：java -jar。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>重点</strong>：提供可选的 <code>starter</code>，简化应用<strong>整合</strong>。</p>
+<ul>
+<li><p><strong>场景启动器（starter）</strong>：web、json、邮件、oss（对象存储）、异步、定时任务、缓存......</p>
+</li>
+<li><p>导很多包，控制好版本。</p>
+</li>
+<li><p>为每一种场景准备了一个依赖：<strong>web-starter</strong>、<strong>mybatis-starter</strong>。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>重点</strong>：<code>按需自动配置</code> Spring 以及第三方库。</p>
+<ul>
+<li><p>如果这些场景要使用（生效）。这个场景的所有配置都会自动配置好。</p>
+</li>
+<li><p><strong>约定大于配置</strong>：每个场景都有很多默认配置。</p>
+</li>
+<li><p>自定义：配置文件中修改几项就可以。</p>
+</li>
+</ul>
+</li>
+<li><p>提供<code>生产级特性</code>：如监控指标、健康检查、外部化配置等。</p>
+<ul>
+<li>监控指标、健康检查（k8s）、外部化配置。</li>
+</ul>
+</li>
+<li><p>无代码生成、<code>无 xml</code>。</p>
+</li>
+</ul>
+<p>总结：简化开发，简化配置，简化整合，简化部署，简化监控，简化运维。</p>
+<h3 id="1-2-快速体验"><a href="#1-2-快速体验" class="headerlink" title="1.2 快速体验"></a>1.2 快速体验</h3><blockquote>
+<p>场景：浏览器发送 &#x2F;hello 请求，返回”Hello, Spring Boot 3!”</p>
+</blockquote>
+<h4 id="1-2-1-开发流程"><a href="#1-2-1-开发流程" class="headerlink" title="1.2.1 开发流程"></a>1.2.1 开发流程</h4><h5 id="1-2-1-1-创建项目"><a href="#1-2-1-1-创建项目" class="headerlink" title="1.2.1.1 创建项目"></a>1.2.1.1 创建项目</h5><p>maven 项目</p>
+<pre><code class="xml">&lt;!-- 所有 Spring Boot 项目都必须继承自 spring-boot-starter-parent --&gt;
+&lt;parent&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+    &lt;version&gt;3.1.3&lt;/version&gt;
+&lt;/parent&gt;
+</code></pre>
+<h5 id="1-2-1-2-导入场景"><a href="#1-2-1-2-导入场景" class="headerlink" title="1.2.1.2 导入场景"></a>1.2.1.2 导入场景</h5><p>场景启动器</p>
+<pre><code class="xml">&lt;dependencies&gt;
+    &lt;!-- Web 开发的场景启动器 --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<h5 id="1-2-1-3-主程序"><a href="#1-2-1-3-主程序" class="headerlink" title="1.2.1.3 主程序"></a>1.2.1.3 主程序</h5><pre><code class="java">package com.myxh.springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author MYXH
+ * @date 2023/9/11
+ * @description 启动 SpringBoot 项目的主入口程序
+ */
+// 这是一个 SpringBoot 应用
+@SpringBootApplication
+public class MainApplication
+&#123;
+    public static void main(String[] args)
+    &#123;
+       SpringApplication.run(MainApplication.class, args);
+    &#125;
+&#125;
+</code></pre>
+<h5 id="1-2-1-4-业务"><a href="#1-2-1-4-业务" class="headerlink" title="1.2.1.4 业务"></a>1.2.1.4 业务</h5><pre><code class="java">package com.myxh.springboot.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author MYXH
+ * @date 2023/9/11
+ */
+@RestController
+public class HelloController
+&#123;
+    @GetMapping(&quot;/hello&quot;)
+    public String hello()
+    &#123;
+        return &quot;Hello, Spring Boot 3!&quot;;
+    &#125;
+&#125;
+</code></pre>
+<h5 id="1-2-1-5-测试"><a href="#1-2-1-5-测试" class="headerlink" title="1.2.1.5 测试"></a>1.2.1.5 测试</h5><p>默认启动访问：localhost:8080</p>
+<h5 id="1-2-1-6-打包"><a href="#1-2-1-6-打包" class="headerlink" title="1.2.1.6 打包"></a>1.2.1.6 打包</h5><pre><code class="xml">&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;!-- SpringBoot 应用打包插件--&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<p><code>mvn clean package</code> 把项目打成可执行的 jar 包。</p>
+<p><code>java -jar boot3-01-demo-1.0-SNAPSHOT.jar</code> 启动项目。</p>
+<h4 id="1-2-2-特性小结"><a href="#1-2-2-特性小结" class="headerlink" title="1.2.2 特性小结"></a>1.2.2 特性小结</h4><h5 id="1-2-2-1-简化整合"><a href="#1-2-2-1-简化整合" class="headerlink" title="1.2.2.1 简化整合"></a>1.2.2.1 简化整合</h5><p>导入相关的场景，拥有相关的功能的场景启动器。</p>
+<p>默认支持的所有场景：<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.build-systems.starters">https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.build-systems.starters</a></p>
+<ul>
+<li><p>官方提供的场景：命名为 <code>spring-boot-starter-*</code>。</p>
+</li>
+<li><p>第三方提供场景：命名为 <code>*-spring-boot-starter</code>。</p>
+</li>
+</ul>
+<p>场景一导入，万物皆就绪。</p>
+<h5 id="1-2-2-2-简化开发"><a href="#1-2-2-2-简化开发" class="headerlink" title="1.2.2.2 简化开发"></a>1.2.2.2 简化开发</h5><p>无需编写任何配置，直接开发业务。</p>
+<h5 id="1-2-2-3-简化配置"><a href="#1-2-2-3-简化配置" class="headerlink" title="1.2.2.3 简化配置"></a>1.2.2.3 简化配置</h5><p><code>application.properties</code>：</p>
+<ul>
+<li><p>集中式管理配置，只需要修改这个文件就行。</p>
+</li>
+<li><p>配置基本都有默认值。</p>
+</li>
+<li><p>能写的所有配置都在：<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties">https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties</a></p>
+</li>
+</ul>
+<h5 id="1-2-2-4-简化部署"><a href="#1-2-2-4-简化部署" class="headerlink" title="1.2.2.4 简化部署"></a>1.2.2.4 简化部署</h5><p>打包为可执行的 jar 包。</p>
+<p>Linux 服务器上有 Java 环境。</p>
+<h5 id="1-2-2-5-简化运维"><a href="#1-2-2-5-简化运维" class="headerlink" title="1.2.2.5 简化运维"></a>1.2.2.5 简化运维</h5><p>修改配置（外部放一个 application.properties 文件）、监控、健康检查......</p>
+<h5 id="1-2-2-6-Spring-Initializr-创建向导"><a href="#1-2-2-6-Spring-Initializr-创建向导" class="headerlink" title="1.2.2.6 Spring Initializr 创建向导"></a>1.2.2.6 Spring Initializr 创建向导</h5><p>一键创建好整个项目结构。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/5b9357cc1d3e46f5be746110ae5b098c.png" alt="Spring Initializr 创建向导"></p>
+<h3 id="1-3-应用分析"><a href="#1-3-应用分析" class="headerlink" title="1.3 应用分析"></a>1.3 应用分析</h3><h4 id="1-3-1-依赖管理机制"><a href="#1-3-1-依赖管理机制" class="headerlink" title="1.3.1 依赖管理机制"></a>1.3.1 依赖管理机制</h4><p>思考：</p>
+<p>1、为什么导入 <code>starter-web </code>所有相关依赖都导入进来？</p>
+<ul>
+<li><p>开发什么场景，导入什么<strong>场景启动器</strong>。</p>
+</li>
+<li><p><strong>maven 依赖传递原则</strong>。<strong>A-B-C：A 就拥有 B 和 C</strong>。</p>
+</li>
+<li><p>导入场景启动器，场景启动器自动把这个场景的所有核心依赖全部导入进来。</p>
+</li>
+</ul>
+<p>2、为什么版本号都不用写？</p>
+<ul>
+<li><p>每个 boot 项目都有一个父项目 <code>spring-boot-starter-parent</code>。</p>
+</li>
+<li><p>parent 的父项目是 <code>spring-boot-dependencies</code>。</p>
+</li>
+<li><p>父项目<strong>版本仲裁中心</strong>，把所有常见的 jar 的依赖版本都声明好了。</p>
+</li>
+<li><p>比如：<code>mysql-connector-j</code>。</p>
+</li>
+</ul>
+<p>3、自定义版本号。</p>
+<ul>
+<li><p>利用 maven 的就近原则。</p>
+<ul>
+<li><p>直接在当前项目 <code>properties</code> 标签中声明父项目用的版本属性的 key。</p>
+</li>
+<li><p>直接在<strong>导入依赖的时候声明版本</strong>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>4、第三方的 jar 包。</p>
+<ul>
+<li><p>boot 父项目没有管理的需要自行声明好。</p>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+    &lt;artifactId&gt;druid&lt;/artifactId&gt;
+    &lt;version&gt;1.2.16&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/2083af5fc724496798aee59d863549ae.png" alt="依赖管理机制"></p>
+<h4 id="1-3-2-自动配置机制"><a href="#1-3-2-自动配置机制" class="headerlink" title="1.3.2 自动配置机制"></a>1.3.2 自动配置机制</h4><h5 id="1-3-2-1-初步理解"><a href="#1-3-2-1-初步理解" class="headerlink" title="1.3.2.1 初步理解"></a>1.3.2.1 初步理解</h5><ul>
+<li><p><strong>自动配置</strong>的 Tomcat、SpringMVC 等。</p>
+<ul>
+<li><p><strong>导入场景</strong>，容器中就会自动配置好这个场景的核心组件。</p>
+</li>
+<li><p>以前：DispatcherServlet、ViewResolver、CharacterEncodingFilter…</p>
+</li>
+<li><p>现在：自动配置好的这些组件。</p>
+</li>
+<li><p>验证：<strong>容器中有了什么组件，就具有什么功能</strong>。</p>
+<pre><code class="java">package com.myxh.springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+* @author MYXH
+* @date 2023/9/11
+* @description 启动 SpringBoot 项目的主入口程序
+*/
+// 主程序：com.myxh.springboot
+// @SpringBootConfiguration
+// @EnableAutoConfiguration
+// @ComponentScan(&quot;com.myxh.springboot&quot;)
+// @SpringBootApplication(scanBasePackages = &quot;com.myxh.springboot&quot;)
+
+// 这是一个 SpringBoot 应用
+@SpringBootApplication
+public class MainApplication
+&#123;
+    public static void main(String[] args)
+    &#123;
+        // Java10：局部变量类型的自动推断
+        var ioc = SpringApplication.run(MainApplication.class, args);
+
+        // 1、获取容器中所有组件的名字
+        String[] beanNames = ioc.getBeanDefinitionNames();
+
+        // 2、挨个遍历
+        /*
+        dispatcherServlet、beanNameViewResolver、characterEncodingFilter、multipartResolver
+        SpringBoot 把以前配置的核心组件现在都给自动配置好了
+        */
+        for (String beanName : beanNames)
+        &#123;
+            System.out.println(&quot;beanName = &quot; + beanName);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>默认的包扫描规则</strong>。</p>
+<ul>
+<li><p><code>@SpringBootApplication</code> 标注的类就是主程序类。</p>
+</li>
+<li><p><strong>SpringBoot 只会扫描主程序所在的包及其下面的子包，自动的 component-scan 功能</strong>。</p>
+</li>
+<li><p><strong>自定义扫描路径</strong>。</p>
+<ul>
+<li><p>@SpringBootApplication(scanBasePackages &#x3D; “com.myxh.springboot”)</p>
+</li>
+<li><p><code>@ComponentScan(&quot;com.myxh.springboot&quot;)</code> 直接指定扫描的路径。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>配置默认值</strong>。</p>
+<ul>
+<li><p><strong>配置文件</strong>的所有配置项是和某个<strong>类的对象</strong>值进行一一绑定的。</p>
+</li>
+<li><p>绑定了配置文件中每一项值的类：<strong>属性类</strong>。</p>
+</li>
+<li><p>比如：</p>
+<ul>
+<li><p><code>ServerProperties</code> 绑定了所有 Tomcat 服务器有关的配置。</p>
+</li>
+<li><p><code>MultipartProperties</code> 绑定了所有文件上传相关的配置。</p>
+</li>
+<li><p>参照官方文档 <a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties.server%EF%BC%8C">https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties.server，</a> 或者参照绑定的<strong>属性类</strong>。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>按需加载自动配置。</p>
+<ul>
+<li><p>导入场景 <code>spring-boot-starter-web</code>。</p>
+</li>
+<li><p>场景启动器除了会导入相关功能依赖，导入一个 <code>spring-boot-starter</code>，是所有 <code>starter</code> 的 <code>starter</code>，基础核心 starter。</p>
+</li>
+<li><p><code>spring-boot-starter</code> 导入了一个包 <code>spring-boot-autoconfigure</code>。包里面都是各种场景的 <code>AutoConfiguration</code> <strong>自动配置类</strong>。</p>
+</li>
+<li><p>虽然全场景的自动配置都在 <code>spring-boot-autoconfigure</code> 这个包，但是不是全都开启的。</p>
+<ul>
+<li>导入哪个场景就开启哪个自动配置。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>总结：导入场景启动器、触发 <code>spring-boot-autoconfigure</code> 这个包的自动配置生效、容器中就会具有相关场景的功能。</p>
+<h5 id="1-3-2-2-完整流程"><a href="#1-3-2-2-完整流程" class="headerlink" title="1.3.2.2 完整流程"></a>1.3.2.2 完整流程</h5><blockquote>
+<p>思考：</p>
+<p>1、<strong>SpringBoot 怎么实现导一个 starter、写一些简单配置，应用就能跑起来，无需关心整合</strong>。</p>
+<p>2、为什么 Tomcat 的端口号可以配置在 <strong>application.properties</strong> 中，并且 <strong>Tomcat</strong> 能启动成功？</p>
+<p>3、导入场景后哪些<strong>自动配置能生效</strong>？</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/f00f4ee5a99f4d5ea7bc9e6ddda2ccb6.png" alt="完整流程"></p>
+<p><strong>自动配置流程细节梳理</strong>：</p>
+<p><strong>1</strong>、导入 <code>starter-web</code>：导入了 web 开发场景。</p>
+<ul>
+<li><p>1、场景启动器导入了相关场景的所有依赖：<code>starter-json</code>、<code>starter-tomcat</code>、<code>springmvc</code>。</p>
+</li>
+<li><p>2、每个场景启动器都引入了一个 <code>spring-boot-starter</code>，核心场景启动器。</p>
+</li>
+<li><p>3、<strong>核心场景启动器</strong>引入了 <code>spring-boot-autoconfigure</code> 包。</p>
+</li>
+<li><p>4、<code>spring-boot-autoconfigure</code> 里面囊括了所有场景的所有配置。</p>
+</li>
+<li><p>5、只要这个包下的所有类都能生效，那么相当于 SpringBoot 官方写好的整合功能就生效了。</p>
+</li>
+<li><p>6、SpringBoot 默认却扫描不到 <code>spring-boot-autoconfigure</code> 下写好的所有<strong>配置类</strong>。（这些<strong>配置类</strong>做了整合操作），<strong>默认只扫描主程序所在的包</strong>。</p>
+</li>
+</ul>
+<p><strong>2</strong>、<strong>主程序</strong>：<code>@SpringBootApplication</code>。</p>
+<ul>
+<li><p>1、<code>@SpringBootApplication</code> 由三个注解组成<code>@SpringBootConfiguration</code>、<code>@EnableAutoConfiguration</code>、<code>@ComponentScan</code>。</p>
+</li>
+<li><p>2、SpringBoot 默认只能扫描自己主程序所在的包及其下面的子包，扫描不到 <code>spring-boot-autoconfigure</code> 包中官方写好的<strong>配置类</strong>。</p>
+</li>
+<li><p>3、<code>@EnableAutoConfiguration</code>：SpringBoot <strong>开启自动配置的核心</strong>。</p>
+<ul>
+<li><p>① 是由 <code>@Import(AutoConfigurationImportSelector.class)</code> 提供功能：批量给容器中导入组件。</p>
+</li>
+<li><p>② SpringBoot 启动会默认加载 146 个配置类。</p>
+</li>
+<li><p>③ 这 <strong>146 个配置类</strong>来自于 <code>spring-boot-autoconfigure</code> 下 <code>META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports</code> 文件指定的。</p>
+</li>
+<li><p>④ 项目启动的时候利用 @Import 批量导入组件机制把 <code>autoconfigure</code> 包下的 146 <code>xxxAutoConfiguration</code> 类导入进来（<strong>自动配置类</strong>）。</p>
+</li>
+</ul>
+</li>
+<li><p>4、按需生效：</p>
+<ul>
+<li><p>虽然导入了 <code>146</code> 个自动配置，并不是这 <code>146</code> 个自动配置类都能生效。</p>
+</li>
+<li><p>每一个自动配置类，都有条件注解 <code>@ConditionalOnXxx</code>，只有条件成立，才能生效。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>3</strong>、<code>xxxAutoConfiguration</code> <strong>自动配置类</strong>。</p>
+<ul>
+<li><p>1、<strong>给容器中使用 @Bean 放一堆组件</strong>。</p>
+</li>
+<li><p>2、每个<strong>自动配置类</strong>都可能有这个注解 <code>@EnableConfigurationProperties(ServerProperties.class)</code>，用来把配置文件中配的指定前缀的属性值封装到 <code>xxxProperties</code> <strong>属性类</strong>中。</p>
+</li>
+<li><p>3、以 Tomcat 为例：把服务器的所有配置都是以 <code>server</code> 开头的。配置都封装到了属性类中。</p>
+</li>
+<li><p>4、给<strong>容器</strong>中放的所有<strong>组件</strong>的一些<strong>核心参数</strong>，都来自于 <code>xxxProperties</code>。<code>xxxProperties</code> <strong>都是和配置文件绑定</strong>。</p>
+</li>
+<li><p>5、<strong>只需要改配置文件的值，核心组件的底层参数都能修改</strong>。</p>
+</li>
+</ul>
+<p><strong>4</strong>、写业务，全程无需关心各种整合（底层这些整合写好了，而且也生效了）。</p>
+<p><strong>核心流程总结</strong>：</p>
+<p>1、导入 <code>starter</code>，就会导入 <code>autoconfigure</code> 包。</p>
+<p>2、<code>autoconfigure</code> 包里面 有一个文件 <code>META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports</code>,里面指定的所有启动要加载的自动配置类。</p>
+<p>3、@EnableAutoConfiguration 会自动的把上面文件里面写的所有<strong>自动配置类都导入进来</strong>。<strong>xxxAutoConfiguration 是有条件注解进行按需加载</strong>。</p>
+<p>4、<code>xxxAutoConfiguration</code> 给容器中导入一堆组件，组件都是从 <code>xxxProperties</code> 中提取属性值。</p>
+<p>5、<code>xxxProperties</code> 又是和<strong>配置文件</strong>进行了绑定。</p>
+<p><strong>效果</strong>：导入 <code>starter</code>、修改配置文件，就能修改底层行为。</p>
+<h5 id="1-3-2-3-如何学好-SpringBoot"><a href="#1-3-2-3-如何学好-SpringBoot" class="headerlink" title="1.3.2.3 如何学好 SpringBoot"></a>1.3.2.3 如何学好 SpringBoot</h5><p>框架的框架、底层基于 Spring。能调整每一个场景的底层行为。100%项目一定会用到<strong>底层自定义</strong>。</p>
+<p>摄影：</p>
+<ul>
+<li><p>傻瓜：自动配置好。</p>
+</li>
+<li><p><strong>单反</strong>：焦距、光圈、快门、感光度......</p>
+</li>
+<li><p>傻瓜+<strong>单反</strong>：</p>
+</li>
+</ul>
+<p>1、理解<strong>自动配置原理</strong>。</p>
+<ul>
+<li>① <strong>导入 starter</strong> -&gt; <strong>生效 xxxAutoConfiguration</strong> -&gt; <strong>组件</strong> -&gt; <strong>xxxProperties</strong> -&gt; <strong>配置文件</strong>。</li>
+</ul>
+<p>2、理解<strong>其他框架底层</strong>。</p>
+<ul>
+<li>① 拦截器。</li>
+</ul>
+<p>3、可以随时<strong>定制化任何组件</strong>。</p>
+<ul>
+<li><p>① <strong>配置文件</strong>。</p>
+</li>
+<li><p>② <strong>自定义组件</strong>。</p>
+</li>
+</ul>
+<p>普通开发：<code>导入 starter</code>，Controller、Service、Mapper、偶尔修改配置文件。</p>
+<p><strong>高级开发</strong>：自定义组件、自定义配置、自定义 starter。</p>
+<p>核心：</p>
+<ul>
+<li><p>这个场景自动配置导入了哪些组件，能不能 Autowired 进来使用。</p>
+</li>
+<li><p>能不能通过修改配置改变组件的一些默认参数。</p>
+</li>
+<li><p>需不需要自己完全定义这个组件。</p>
+</li>
+<li><p><strong>场景定制化</strong>。</p>
+</li>
+</ul>
+<p><strong>最佳实战</strong>：</p>
+<ul>
+<li><p><strong>选场景</strong>，导入到项目。</p>
+<ul>
+<li><p>官方：starter。</p>
+</li>
+<li><p>第三方：去仓库搜。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>写配置，改配置文件关键项</strong>。</p>
+<ul>
+<li>数据库参数（连接地址、账号密码......）。</li>
+</ul>
+</li>
+<li><p>分析这个场景导入了<strong>哪些能用的组件</strong>。</p>
+<ul>
+<li><p><strong>自动装配</strong>这些组件进行后续使用。</p>
+</li>
+<li><p>不满意 SprngBoot 提供的自动配好的默认组件。</p>
+<ul>
+<li><p><strong>定制化</strong>。</p>
+</li>
+<li><p>改配置。</p>
+</li>
+<li><p>自定义组件。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>整合 redis：</p>
+<ul>
+<li><p><strong>选场景</strong>：<code>spring-boot-starter-data-redis</code>。</p>
+<ul>
+<li>场景 AutoConfiguration 就是这个场景的自动配置类。</li>
+</ul>
+</li>
+<li><p>写配置：</p>
+<ul>
+<li><p>分析到这个场景的自动配置类开启了哪些属性绑定关系。</p>
+</li>
+<li><p><code>@EnableConfigurationProperties(RedisProperties.class)</code>。</p>
+</li>
+<li><p>修改 redis 相关的配置。</p>
+</li>
+</ul>
+</li>
+<li><p>分析组件：</p>
+<ul>
+<li><p>分析到 <code>RedisAutoConfiguration</code> 给容器中放了 <code>StringRedisTemplate</code>。</p>
+</li>
+<li><p>给业务代码中自动装配 <code>StringRedisTemplate</code>。</p>
+</li>
+</ul>
+</li>
+<li><p>定制化：</p>
+<ul>
+<li><p>修改配置文件。</p>
+</li>
+<li><p>自定义组件，自己给容器中放一个 <code>StringRedisTemplate</code>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-核心技能"><a href="#1-4-核心技能" class="headerlink" title="1.4 核心技能"></a>1.4 核心技能</h3><h4 id="1-4-1-常用注解"><a href="#1-4-1-常用注解" class="headerlink" title="1.4.1 常用注解"></a>1.4.1 常用注解</h4><blockquote>
+<p>SpringBoot 摒弃 XML 配置方式，改为<strong>全注解驱动</strong>。</p>
+</blockquote>
+<h5 id="1-4-1-1-组件注册"><a href="#1-4-1-1-组件注册" class="headerlink" title="1.4.1.1 组件注册"></a>1.4.1.1 组件注册</h5><p><strong>@Configuration</strong>、**@SpringBootConfiguration**</p>
+<p><strong>@Bean</strong>、**@Scope**</p>
+<p><strong>@Controller</strong>、 <strong>@Service</strong>、**@Repository<strong>、</strong>@Component**</p>
+<p><strong>@Import</strong></p>
+<p><strong>@ComponentScan</strong></p>
+<p>步骤：</p>
+<p><strong>1</strong>、**@Configuration 编写一个配置类**。</p>
+<p><strong>2</strong>、<strong>在配置类中，自定义方法给容器中注册组件。配合@Bean</strong>。</p>
+<p><strong>3</strong>、<strong>或使用@Import 导入第三方的组件</strong>。</p>
+<h5 id="1-4-1-2-条件注解"><a href="#1-4-1-2-条件注解" class="headerlink" title="1.4.1.2 条件注解"></a>1.4.1.2 条件注解</h5><blockquote>
+<p>如果注解指定的<strong>条件成立</strong>，则触发指定行为。</p>
+</blockquote>
+<p><strong>@ConditionalOnXxx</strong></p>
+<p><strong>@ConditionalOnClass：如果类路径中存在这个类，则触发指定行为</strong>。</p>
+<p><strong>@ConditionalOnMissingClass：如果类路径中不存在这个类，则触发指定行为</strong>。</p>
+<p><strong>@ConditionalOnBean：如果容器中存在这个 Bean（组件），则触发指定行为</strong>。</p>
+<p><strong>@ConditionalOnMissingBean：如果容器中不存在这个 Bean（组件），则触发指定行为</strong>。</p>
+<blockquote>
+<p>场景：</p>
+<ul>
+<li><p>如果存在 <strong>FastsqlException</strong> 这个类，给容器中放一个 <strong>Cat</strong> 组件，命名 cat1。</p>
+</li>
+<li><p>否则，就给容器中放一个 <strong>Dog</strong> 组件，命名 dog1。</p>
+</li>
+<li><p>如果系统中有 <strong>dog1</strong> 这个组件，就给容器中放一个 User 组件，名 zhangsan。</p>
+</li>
+<li><p>否则，就放一个 User，名叫 lisi。</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>@ConditionalOnBean（value&#x3D;组件类型，name&#x3D;组件名字）：判断容器中是否有这个类型的组件，并且名字是指定的值</strong>。</p>
+<p>@ConditionalOnRepositoryType (org.springframework.boot.autoconfigure.data)</p>
+<p>@ConditionalOnDefaultWebSecurity (org.springframework.boot.autoconfigure.security)</p>
+<p>@ConditionalOnSingleCandidate (org.springframework.boot.autoconfigure.condition)</p>
+<p>@ConditionalOnWebApplication (org.springframework.boot.autoconfigure.condition)</p>
+<p>@ConditionalOnWarDeployment (org.springframework.boot.autoconfigure.condition)</p>
+<p>@ConditionalOnJndi (org.springframework.boot.autoconfigure.condition)</p>
+<p>@ConditionalOnResource (org.springframework.boot.autoconfigure.condition)</p>
+<p>@ConditionalOnExpression (org.springframework.boot.autoconfigure.condition)</p>
+<p><strong>@ConditionalOnClass (org.springframework.boot.autoconfigure.condition)</strong></p>
+<p>@ConditionalOnEnabledResourceChain (org.springframework.boot.autoconfigure.web)</p>
+<p><strong>@ConditionalOnMissingClass (org.springframework.boot.autoconfigure.condition)</strong></p>
+<p>@ConditionalOnNotWebApplication (org.springframework.boot.autoconfigure.condition)</p>
+<p>@ConditionalOnProperty (org.springframework.boot.autoconfigure.condition)</p>
+<p>@ConditionalOnCloudPlatform (org.springframework.boot.autoconfigure.condition)</p>
+<p><strong>@ConditionalOnBean (org.springframework.boot.autoconfigure.condition)</strong></p>
+<p><strong>@ConditionalOnMissingBean (org.springframework.boot.autoconfigure.condition)</strong></p>
+<p>@ConditionalOnMissingFilterBean (org.springframework.boot.autoconfigure.web.servlet)</p>
+<p>@Profile (org.springframework.context.annotation)</p>
+<p>@ConditionalOnInitializedRestarter (org.springframework.boot.devtools.restart)</p>
+<p>@ConditionalOnGraphQlSchema (org.springframework.boot.autoconfigure.graphql)</p>
+<p>@ConditionalOnJava (org.springframework.boot.autoconfigure.condition)</p>
+<h5 id="1-4-1-3-属性绑定"><a href="#1-4-1-3-属性绑定" class="headerlink" title="1.4.1.3 属性绑定"></a>1.4.1.3 属性绑定</h5><p><strong>@ConfigurationProperties：声明组件的属性和配置文件哪些前缀开始项进行绑定</strong>。</p>
+<p><strong>@EnableConfigurationProperties：快速注册注解</strong>：</p>
+<ul>
+<li><strong>场景</strong>：SpringBoot 默认只扫描自己主程序所在的包。如果导入第三方包，即使组件上标注了 @Component、@ConfigurationProperties 注解也没用。因为组件都扫描不进来，此时使用这个注解就可以快速进行属性绑定并把组件注册进容器。</li>
+</ul>
+<blockquote>
+<p>将容器中任意<strong>组件（Bean）的属性值</strong>和<strong>配置文件</strong>的配置项的值<strong>进行绑定</strong>。</p>
+<p>1、<strong>给容器中注册组件（@Component、@Bean）</strong>。</p>
+<p>2、<strong>使用 @ConfigurationProperties 声明组件和配置文件的哪些配置项进行绑定</strong>。</p>
+</blockquote>
+<h4 id="1-4-2-YAML-配置文件"><a href="#1-4-2-YAML-配置文件" class="headerlink" title="1.4.2 YAML 配置文件"></a>1.4.2 YAML 配置文件</h4><blockquote>
+<p><strong>痛点</strong>：SpringBoot 集中化管理配置，<strong>application.properties</strong>。</p>
+<p><strong>问题</strong>：配置多以后难阅读和修改，<strong>层级结构辨识度不高</strong>。</p>
+</blockquote>
+<blockquote>
+<p>YAML 是 “YAML Ain’t a Markup Language”（YAML 不是一种标记语言）。在开发的这种语言时，YAML 的意思其实是：”Yet Another Markup Language”（是另一种标记语言）。</p>
+<ul>
+<li><p>设计目标，就是<strong>方便人类读写</strong>。</p>
+</li>
+<li><p><strong>层次分明</strong>，更适合做配置文件。</p>
+</li>
+</ul>
+<p>使用 <strong>.yaml</strong> 或 <strong>.yml</strong> 作为文件后缀。</p>
+</blockquote>
+<h5 id="1-4-2-1-基本语法"><a href="#1-4-2-1-基本语法" class="headerlink" title="1.4.2.1. 基本语法"></a>1.4.2.1. 基本语法</h5><ul>
+<li><p><strong>大小写敏感</strong>。</p>
+</li>
+<li><p>使用<strong>缩进表示层级关系</strong>，<strong>k: v，使用空格分割 k, v</strong>。</p>
+</li>
+<li><p>缩进时不允许使用 Tab 键，只允许<strong>使用空格</strong>。</p>
+</li>
+<li><p>缩进的空格数目不重要，只要<strong>相同层级</strong>的元素<strong>左侧对齐</strong>即可。</p>
+</li>
+<li><p><strong># 表示注释</strong>，从这个字符一直到行尾，都会被解析器忽略。</p>
+</li>
+</ul>
+<p>支持的写法：</p>
+<ul>
+<li><p><strong>对象</strong>：<strong>键值对</strong>的集合，例如：映射（map）、 哈希（hash）、 字典（dictionary）。</p>
+</li>
+<li><p><strong>数组</strong>：一组按次序排列的值，例如：序列（sequence）、 列表（list）。</p>
+</li>
+<li><p><strong>纯量</strong>：单个的、不可再分的值，例如：字符串、数字、bool、日期。</p>
+</li>
+</ul>
+<h5 id="1-4-2-2-示例"><a href="#1-4-2-2-示例" class="headerlink" title="1.4.2.2 示例"></a>1.4.2.2 示例</h5><pre><code class="java">package com.myxh.springboot.bean;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * @author MYXH
+ * @date 2023/9/11
+ */
+@Component
+// 和配置文件 person 前缀的所有配置进行绑定
+@ConfigurationProperties(prefix = &quot;person&quot;)
+// 自动生成无参构造器
+@NoArgsConstructor
+// 自动生成全参构造器
+@AllArgsConstructor
+// 自动生成 JavaBean 属性的 getter/setter
+@Data
+public class Person
+&#123;
+    private String name;
+    private Integer age;
+    private Date birthDay;
+    private Boolean like;
+    // 嵌套对象
+    private Child child;
+    // 数组（里面是对象）
+    private List&lt;Dog&gt; dogs;
+    // Map
+    private Map&lt;String, Cat&gt; cats;
+&#125;
+</code></pre>
+<pre><code class="java">package com.myxh.springboot.bean;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+import java.util.List;
+
+/**
+ * @author MYXH
+ * @date 2023/9/11
+ */
+@Component
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Child
+&#123;
+    private String name;
+    private Integer age;
+    private Date birthDay;
+    // 数组
+    private List&lt;String&gt; text;
+&#125;
+</code></pre>
+<pre><code class="java">package com.myxh.springboot.bean;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author MYXH
+ * @date 2023/9/11
+ */
+@Component
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Dog
+&#123;
+    private String name;
+    private Integer age;
+&#125;
+</code></pre>
+<pre><code class="java">package com.myxh.springboot.bean;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author MYXH
+ * @date 2023/9/11
+ */
+@Component
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Cat
+&#123;
+    private String name;
+    private Integer age;
+&#125;
+</code></pre>
+<p>properties 表示法。</p>
+<pre><code class="properties">server.port=8080
+
+spring.servlet.multipart.max-file-size=10MB
+
+# 配置 Redis
+spring.data.redis.host=localhost
+spring.data.redis.port=6379
+
+# properties 表示复杂对象
+person.name=张三
+person.age=35
+person.birthDay=1988/01/01 00:00:00
+person.like=true
+person.child.name=李四
+person.child.age=12
+person.child.birthDay=2011/01/01
+person.child.text[0]=hello
+person.child.text[1]=world
+person.dogs[0].name=小黑
+person.dogs[0].age=2
+person.dogs[1].name=小白
+person.dogs[1].age=1
+person.cats.cat1.name=小蓝
+person.cats.cat1.age=2
+person.cats.cat2.name=小灰
+person.cats.cat2.age=1
+</code></pre>
+<p>yaml 表示法。</p>
+<pre><code class="yml"># 1、k: v，k v 之前是空格区分
+# 2、属性有层级关系，使用下一行，空两个空格
+# 3、左侧对齐的代表同一层级的属性
+
+---
+server:
+  port: 8080
+  # port: 8081
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
+  # 配置 Redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+# 下边是一个单独文档
+---
+# yaml 表示复杂对象
+person:
+  name: 张三
+  age: 35
+  birth-day: 1988/01/01 00:00:00
+  like: true
+
+  child:
+    name: 李四
+    age: 12
+    birth-day: 2011/01/01
+    # text: [&quot;he\nllo&quot;,&#39;wor\nld&#39;]
+    text:
+      - &quot;he\nllo&quot;
+      - &#39;wor\nld&#39;
+      - |
+        cats:
+          cat1:
+            name: 小蓝
+            age: 2
+
+          # 对象也可用 &#123;&#125; 表示
+          cat2: &#123;name: 小灰,age: 1&#125;
+      - &gt;
+        cats:
+        cat1:
+        name: 小蓝
+        age: 2
+
+        # 对象也可用 &#123;&#125; 表示
+        cat2: &#123;name: 小灰,age: 1&#125;
+
+  dogs:
+    # 数组也可用 - 表示
+    - name: 小黑
+      age: 2
+    - name: 小白
+      age: 1
+
+  cats:
+    cat1:
+      name: 小蓝
+      age: 2
+
+    # 对象也可用 &#123;&#125; 表示
+    cat2: &#123; name: 小灰, age: 1 &#125;
+</code></pre>
+<h5 id="1-4-2-3-细节"><a href="#1-4-2-3-细节" class="headerlink" title="1.4.2.3 细节"></a>1.4.2.3 细节</h5><ul>
+<li><p>birthDay 推荐写为 birth-day。</p>
+</li>
+<li><p><strong>文本</strong>：</p>
+<ul>
+<li><p><strong>单引号</strong>不会转义【\n 则为普通字符串显示】。</p>
+</li>
+<li><p><strong>双引号</strong>会转义【\n 会显示为<strong>换行符</strong>】。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>大文本</strong>：</p>
+<ul>
+<li><p><code>|</code> 开头，大文本写在下层，<strong>保留文本格式，换行符正确显示</strong>。</p>
+</li>
+<li><p><code>&gt;</code> 开头，大文本写在下层，折叠换行符。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>多文档合并</strong>：</p>
+<ul>
+<li>使用<code>\-\-\-</code>可以把多个 yaml 文档合并在一个文档中，每个文档区依然认为内容独立。</li>
+</ul>
+<h5 id="1-4-2-4-小技巧：lombok"><a href="#1-4-2-4-小技巧：lombok" class="headerlink" title="1.4.2.4. 小技巧：lombok"></a>1.4.2.4. 小技巧：lombok</h5><blockquote>
+<p>简化 JavaBean 开发。自动生成构造器、getter&#x2F;setter、自动生成 Builder 模式等。</p>
+</blockquote>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+    &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+    &lt;scope&gt;compile&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>使用 <code>@Data</code> 等注解。</p>
+<h4 id="1-4-3-日志配置"><a href="#1-4-3-日志配置" class="headerlink" title="1.4.3 日志配置"></a>1.4.3 日志配置</h4><p>规范：项目开发不要编写 <code>System.out.println()</code>，应该用<strong>日志</strong>记录信息。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/ef743df4971244f78020559b5e876397.png" alt="日志配置"></p>
+<h5 id="1-4-3-1-简介"><a href="#1-4-3-1-简介" class="headerlink" title="1.4.3.1 简介"></a>1.4.3.1 简介</h5><p>1、Spring 使用 <code>commons-logging</code> 作为内部日志，但底层日志实现是开放的。可对接其他日志框架。</p>
+<ul>
+<li>① spring5 及以后 commons-logging 被 spring 直接自己实现了。</li>
+</ul>
+<p>2、支持 <code>jul</code>，<code>log4j2</code>，<code>logback</code>。SpringBoot 提供了默认的控制台输出配置，也可以配置输出为文件。</p>
+<p>3、<code>logback</code> 是默认使用的。</p>
+<p>4、虽然<strong>日志框架很多</strong>，但是不用担心，使用 SpringBoot 的<strong>默认配置就能工作的很好</strong>。</p>
+<p><strong>SpringBoot 怎么把日志默认配置好的</strong>。</p>
+<p>1、每个 <code>starter</code> 场景，都会导入一个核心场景 <code>spring-boot-starter</code>。</p>
+<p>2、核心场景引入了日志的所用功能 <code>spring-boot-starter-logging</code>。</p>
+<p>3、默认使用了 <code>logback + slf4j</code> 组合作为默认底层日志。</p>
+<p>4、<code>日志是系统一启动就要用</code>，<code>xxxAutoConfiguration</code> 是系统启动好了以后放好的组件，后来用的。</p>
+<p>5、日志是利用<strong>监听器机制</strong>配置好的。<code>ApplicationListener</code>。</p>
+<p>6、日志所有的配置都可以通过修改配置文件实现。以 <code>logging</code> 开始的所有配置。</p>
+<h5 id="1-4-3-2-日志格式"><a href="#1-4-3-2-日志格式" class="headerlink" title="1.4.3.2 日志格式"></a>1.4.3.2 日志格式</h5><pre><code class="sh">2023-09-14 20:24:43.709  INFO 96528 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2023-09-14 20:24:43.712  INFO 96528 --- [main] o.a.c.c.AprLifecycleListener             : Loaded Apache Tomcat Native library [2.0.5] using APR version [1.7.4].
+</code></pre>
+<p>默认输出格式：</p>
+<ul>
+<li><p>时间和日期：毫秒级精度。</p>
+</li>
+<li><p>日志级别：<code>ERROR</code>, <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, <code>TRACE</code>。</p>
+</li>
+<li><p>进程 ID。</p>
+</li>
+<li><p>---：消息分割符。</p>
+</li>
+<li><p>线程名：使用[]包含。</p>
+</li>
+<li><p>Logger 名：通常是产生日志的<strong>类名</strong>。</p>
+</li>
+<li><p>消息：日志记录的内容。</p>
+</li>
+</ul>
+<p>注意：logback 没有 <code>FATAL</code> 级别，对应的是 <code>ERROR</code>。</p>
+<p>默认值：参照：<code>spring-boot</code> 包 <code>additional-spring-configuration-metadata.json</code> 文件。</p>
+<p>默认输出格式值：<code>%clr(%d&#123;$&#123;LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSXXX&#125;&#125;)&#123;faint&#125; %clr($&#123;LOG_LEVEL_PATTERN:-%5p&#125;) %clr($&#123;PID:- &#125;)&#123;magenta&#125; %clr(---)&#123;faint&#125; %clr([%15.15t])&#123;faint&#125; %clr(%-40.40logger&#123;39&#125;)&#123;cyan&#125; %clr(:)&#123;faint&#125; %m%n$&#123;LOG_EXCEPTION_CONVERSION_WORD:-%wEx&#125;</code>。</p>
+<p>可修改为：<code>%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; %-5level [%thread] %logger&#123;15&#125; ===&gt; %msg%n</code>。</p>
+<h5 id="1-4-3-3-记录日志"><a href="#1-4-3-3-记录日志" class="headerlink" title="1.4.3.3 记录日志"></a>1.4.3.3 记录日志</h5><pre><code class="java">Logger logger = LoggerFactory.getLogger(getClass());
+</code></pre>
+<p>或者使用 Lombok 的@Slf4j 注解。</p>
+<h5 id="1-4-3-4-日志级别"><a href="#1-4-3-4-日志级别" class="headerlink" title="1.4.3.4 日志级别"></a>1.4.3.4 日志级别</h5><ul>
+<li><p>由低到高：<code>ALL, TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF</code>。</p>
+<ul>
+<li><p><strong>只会打印指定级别及以上级别的日志</strong>。</p>
+</li>
+<li><p>ALL：打印所有日志。</p>
+</li>
+<li><p>TRACE：追踪框架详细流程日志，一般不使用。</p>
+</li>
+<li><p>DEBUG：开发调试细节日志。</p>
+</li>
+<li><p>INFO：关键、感兴趣信息日志。</p>
+</li>
+<li><p>WARN：警告但不是错误的信息日志，比如：版本过时。</p>
+</li>
+<li><p>ERROR：业务错误日志，比如出现各种异常。</p>
+</li>
+<li><p>FATAL：致命错误日志，比如 jvm 系统崩溃。</p>
+</li>
+<li><p>OFF：关闭所有日志记录。</p>
+</li>
+</ul>
+</li>
+<li><p>不指定级别的所有类，都使用 root 指定的级别作为默认级别。</p>
+</li>
+<li><p>SpringBoot 日志<strong>默认级别是 INFO</strong>。</p>
+</li>
+</ul>
+<p>1、在 <code>application.properties/yaml</code> 中配置 <code>logging.level.&lt;logger-name&gt;=&lt;level&gt;</code>指定日志级别。</p>
+<p>2、<code>level</code> 可取值范围：<code>TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF</code>，定义在 <code>LogLevel</code> 类中。</p>
+<p>3、root 的 <code>logger-name</code> 叫 <code>root</code>，可以配置 <code>logging.level.root=warn</code>，代表所有未指定日志级别都使用 root 的 warn 级别。</p>
+<h5 id="1-4-3-5-日志分组"><a href="#1-4-3-5-日志分组" class="headerlink" title="1.4.3.5 日志分组"></a>1.4.3.5 日志分组</h5><p>比较有用的技巧是：</p>
+<p>将相关的 <code>logger</code> 分组在一起，统一配置。SpringBoot 也支持。比如：Tomcat 相关的日志统一设置。</p>
+<pre><code class="properties">logging.group.tomcat=org.apache.catalina,org.apache.coyote,org.apache.tomcat
+logging.level.tomcat=trace
+</code></pre>
+<p>SpringBoot 预定义两个组。</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Loggers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>web</td>
+<td><code>org.springframework.core.codec</code>, <code>org.springframework.http</code>, <code>org.springframework.web</code>, <code>org.springframework.boot.actuate.endpoint.web</code>, <code>org.springframework.boot.web.servlet.ServletContextInitializerBeans</code></td>
+</tr>
+<tr>
+<td>sql</td>
+<td><code>org.springframework.jdbc.core</code>, <code>org.hibernate.SQL</code>, <code>org.jooq.tools.LoggerListener</code></td>
+</tr>
+</tbody></table>
+<h5 id="1-4-3-6-文件输出"><a href="#1-4-3-6-文件输出" class="headerlink" title="1.4.3.6 文件输出"></a>1.4.3.6 文件输出</h5><p>SpringBoot 默认只把日志写在控制台，如果想额外记录到文件，可以在 <code>application.properties</code> 中添加 <code>logging.file.name</code> 或 <code>logging.file.path</code> 配置项。</p>
+<table>
+<thead>
+<tr>
+<th><code>logging.file.name</code></th>
+<th><code>logging.file.path</code></th>
+<th>示例</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>未指定</td>
+<td>未指定</td>
+<td>无</td>
+<td>仅控制台输出。</td>
+</tr>
+<tr>
+<td><strong>指定</strong></td>
+<td>未指定</td>
+<td><code>my.log</code></td>
+<td>写入指定文件。可以<code>加路径</code>。</td>
+</tr>
+<tr>
+<td>未指定</td>
+<td><strong>指定</strong></td>
+<td><code>./log</code></td>
+<td>写入指定目录，文件名为 <code>spring.log</code>。</td>
+</tr>
+<tr>
+<td><strong>指定</strong></td>
+<td><strong>指定</strong></td>
+<td>无</td>
+<td>以 <code>logging.file.name</code> 为准。</td>
+</tr>
+</tbody></table>
+<h5 id="1-4-3-7-文件归档与滚动切割"><a href="#1-4-3-7-文件归档与滚动切割" class="headerlink" title="1.4.3.7 文件归档与滚动切割"></a>1.4.3.7 文件归档与滚动切割</h5><blockquote>
+<p>归档：每天的日志单独存到一个文档中。</p>
+<p>切割：每个文件 10MB，超过大小切割成另外一个文件。</p>
+</blockquote>
+<p>1、每天的日志应该独立分割出来存档。如果使用 <code>logback</code>（SpringBoot 默认整合），可以通过 <code>application.properties/yaml</code> 文件指定日志滚动规则。</p>
+<p>2、如果是其他日志系统，需要自行配置（添加 <code>log4j2.xml</code> 或 <code>log4j2-spring.xml</code>）。</p>
+<p>3、支持的滚动规则设置如下。</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>logging.logback.rollingpolicy.file-name-pattern</code></td>
+<td>日志存档的文件名格式（默认值：<code>$&#123;LOG_FILE&#125;.%d&#123;yyyy-MM-dd&#125;.%i.gz</code>）。</td>
+</tr>
+<tr>
+<td><code>logging.logback.rollingpolicy.clean-history-on-start</code></td>
+<td>应用启动时是否清除以前存档（默认值：<code>false</code>）。</td>
+</tr>
+<tr>
+<td><code>logging.logback.rollingpolicy.max-file-size</code></td>
+<td>存档前，每个日志文件的最大大小（默认值：<code>10MB</code>）。</td>
+</tr>
+<tr>
+<td><code>logging.logback.rollingpolicy.total-size-cap</code></td>
+<td>日志文件被删除之前，可以容纳的最大大小（默认值：<code>0B</code>）。设置 <code>1GB</code> 则磁盘存储超过 1GB 日志后就会删除旧日志文件。</td>
+</tr>
+<tr>
+<td><code>logging.logback.rollingpolicy.max-history</code></td>
+<td>日志文件保存的最大天数(默认值：<code>7</code>)。</td>
+</tr>
+</tbody></table>
+<h5 id="1-4-3-8-自定义配置"><a href="#1-4-3-8-自定义配置" class="headerlink" title="1.4.3.8 自定义配置"></a>1.4.3.8 自定义配置</h5><p>通常配置 <code>application.properties</code> 就够了。当然也可以自定义。比如：</p>
+<table>
+<thead>
+<tr>
+<th>日志系统</th>
+<th>自定义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Logback</td>
+<td><code>logback-spring.xml</code>, <code>logback-spring.groovy</code>, <code>logback.xml</code>, <code>logback.groovy</code></td>
+</tr>
+<tr>
+<td>Log4j2</td>
+<td><code>log4j2-spring.xml or log4j2.xml</code></td>
+</tr>
+<tr>
+<td>JDK (Java Util Logging)</td>
+<td><code>logging.properties</code></td>
+</tr>
+</tbody></table>
+<p>如果可能，建议在日志配置中使用 <code>-spring</code> 变量（例如，<code>logback-spring.xml</code> 而不是 <code>logback.xml</code>）。如果使用标准配置文件，spring 无法完全控制日志初始化。</p>
+<p>最佳实战：自己要写配置，配置文件名加上 <code>xxx-spring.xml</code>。</p>
+<h5 id="1-4-3-9-切换日志组合"><a href="#1-4-3-9-切换日志组合" class="headerlink" title="1.4.3.9 切换日志组合"></a>1.4.3.9 切换日志组合</h5><pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;!-- 如果第三方框架使用了其他日志框架，如 jul，可以排除掉这个框架的默认日志 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-log4j2&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>log4j2 支持 yaml 和 json 格式的配置文件。</p>
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>依赖</th>
+<th>文件名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>YAML</td>
+<td>com.fasterxml.jackson.core:jackson-databind、com.fasterxml.jackson.dataformat:jackson-dataformat-yaml</td>
+<td>log4j2.yaml 或 log4j2.yml</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>com.fasterxml.jackson.core:jackson-databind</td>
+<td>log4j2.json 或 log4j2.jsn</td>
+</tr>
+</tbody></table>
+<h5 id="1-4-3-10-最佳实战"><a href="#1-4-3-10-最佳实战" class="headerlink" title="1.4.3.10 最佳实战"></a>1.4.3.10 最佳实战</h5><p>1、导入任何第三方框架，先排除它的日志包，因为 Boot 底层控制好了日志。</p>
+<p>2、修改 <code>application.properties</code> 配置文件，就可以调整日志的所有行为。如果不够，可以编写日志框架自己的配置文件放在类路径下就行，比如 <code>logback-spring.xml</code>，<code>log4j2-spring.xml</code>。</p>
+<p>3、如需对接<strong>专业日志系统</strong>，也只需要把 logback 记录的<strong>日志</strong>灌倒 <strong>kafka</strong> 之类的中间件，这和 SpringBoot 没关系，都是日志框架自己的配置，<strong>修改配置文件即可</strong>。</p>
+<p>4、<strong>业务中使用 slf4j-api 记录日志，不要再用 System.out.println() 了</strong></p>
+<h2 id="第-2-章-SpringBoot3-Web-开发"><a href="#第-2-章-SpringBoot3-Web-开发" class="headerlink" title="第 2 章 SpringBoot3-Web 开发"></a>第 2 章 SpringBoot3-Web 开发</h2><blockquote>
+<p>SpringBoot 的 Web 开发能力，由 <strong>SpringMVC</strong> 提供。</p>
+</blockquote>
+<h3 id="2-1-WebMvcAutoConfiguration-原理"><a href="#2-1-WebMvcAutoConfiguration-原理" class="headerlink" title="2.1 WebMvcAutoConfiguration 原理"></a>2.1 WebMvcAutoConfiguration 原理</h3><h4 id="2-1-1-生效条件"><a href="#2-1-1-生效条件" class="headerlink" title="2.1.1 生效条件"></a>2.1.1 生效条件</h4><pre><code class="java">// 在这些自动配置之后
+@AutoConfiguration(after = &#123; DispatcherServletAutoConfiguration.class,
+    TaskExecutionAutoConfiguration.class,
+    ValidationAutoConfiguration.class &#125;)
+// 如果是 Web 应用就生效，类型有 SERVLET、REACTIVE（响应式 Web）
+@ConditionalOnWebApplication(type = Type.SERVLET)
+@ConditionalOnClass(&#123; Servlet.class, DispatcherServlet.class, WebMvcConfigurer.class &#125;)
+// 容器中没有这个 Bean，才生效，默认就是没有
+@ConditionalOnMissingBean(WebMvcConfigurationSupport.class)
+// 优先级
+@AutoConfigureOrder(Ordered.HIGHEST_PRECEDENCE + 10)
+@ImportRuntimeHints(WebResourcesRuntimeHints.class)
+public class WebMvcAutoConfiguration
+&#123;
+
+&#125;
+</code></pre>
+<h4 id="2-1-2-效果"><a href="#2-1-2-效果" class="headerlink" title="2.1.2 效果"></a>2.1.2 效果</h4><p>1、放了两个 Filter：</p>
+<ul>
+<li><p>① <code>HiddenHttpMethodFilter</code>：页面表单提交 Rest 请求（GET、POST、PUT、DELETE）。</p>
+</li>
+<li><p>② <code>FormContentFilter</code>：表单内容 Filter，GET（数据放 URL 后面）、POST（数据放请求体）请求可以携带数据，PUT、DELETE 的请求体数据会被忽略。</p>
+</li>
+</ul>
+<p>2、给容器中放了 <code>WebMvcConfigurer</code> 组件：给 SpringMVC 添加各种定制功能。</p>
+<ul>
+<li><p>① 所有的功能最终会和配置文件进行绑定。</p>
+</li>
+<li><p>② WebMvcProperties：<code>spring.mvc</code> 配置文件。</p>
+</li>
+<li><p>③ WebProperties：<code>spring.web</code> 配置文件。</p>
+</li>
+</ul>
+<pre><code class="java">@Configuration(proxyBeanMethods = false)
+// 额外导入了其他配置
+@Import(EnableWebMvcConfiguration.class)
+@EnableConfigurationProperties(&#123; WebMvcProperties.class, WebProperties.class &#125;)
+@Order(0)
+public static class WebMvcAutoConfigurationAdapter implements WebMvcConfigurer, ServletContextAware
+&#123;
+
+&#125;
+</code></pre>
+<h4 id="2-1-3-WebMvcConfigurer-接口"><a href="#2-1-3-WebMvcConfigurer-接口" class="headerlink" title="2.1.3 WebMvcConfigurer 接口"></a>2.1.3 WebMvcConfigurer 接口</h4><p>提供了配置 SpringMVC 底层的所有组件入口。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/5f8d4aa8e9904dbd9b4491b745d936ff.png" alt="WebMvcConfigurer 接口"></p>
+<h4 id="2-1-4-静态资源规则源码"><a href="#2-1-4-静态资源规则源码" class="headerlink" title="2.1.4 静态资源规则源码"></a>2.1.4 静态资源规则源码</h4><pre><code class="java">@Override
+public void addResourceHandlers(ResourceHandlerRegistry registry)
+&#123;
+    if (!this.resourceProperties.isAddMappings())
+    &#123;
+        logger.debug(&quot;Default resource handling disabled&quot;);
+
+        return;
+    &#125;
+
+    addResourceHandler(registry, this.mvcProperties.getWebjarsPathPattern(),
+        &quot;classpath:/META-INF/resources/webjars/&quot;);
+
+    addResourceHandler(registry, this.mvcProperties.getStaticPathPattern(),
+        (registration) -&gt; &#123;
+        registration.addResourceLocations(this.resourceProperties.getStaticLocations());
+
+        if (this.servletContext != null)
+        &#123;
+            ServletContextResource resource = new ServletContextResource(this.servletContext, SERVLET_LOCATION);
+            registration.addResourceLocations(resource);
+        &#125;
+    &#125;);
+&#125;
+</code></pre>
+<p>1、规则一：访问 <code>/webjars/**</code> 路径就去 <code>classpath:/META-INF/resources/webjars/</code> 下找资源。</p>
+<ul>
+<li>① Maven 导入依赖。</li>
+</ul>
+<p>2、规则二：访问 <code>/**</code> 路径就去<code>静态资源默认的四个位置找资源</code>。</p>
+<ul>
+<li><p>① <code>classpath:/META-INF/resources/</code></p>
+</li>
+<li><p>② <code>classpath:/resources/</code></p>
+</li>
+<li><p>③ <code>classpath:/static/</code></p>
+</li>
+<li><p>④ <code>classpath:/public/</code></p>
+</li>
+</ul>
+<p>3、规则三：<strong>静态资源默认都有缓存规则的设置</strong>。</p>
+<ul>
+<li><p>① 所有缓存的设置，直接通过<strong>配置文件</strong>：<code>spring.web</code>。</p>
+</li>
+<li><p>② cachePeriod：缓存周期，多久不用找服务器要新的，默认没有缓存周期，以秒为单位。</p>
+</li>
+<li><p>③ cacheControl：<strong>HTTP 缓存控制</strong>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Caching">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Caching</a> 。</p>
+</li>
+<li><p>④ <strong>useLastModified</strong>：是否使用最后一次修改，配合 HTTP Cache 规则。</p>
+</li>
+</ul>
+<blockquote>
+<p>如果浏览器访问了一个静态资源 <strong>index.js</strong>，如果服务这个资源没有发生变化，下次访问的时候就可以直接让浏览器用自己缓存中的东西，而不用给服务器发请求。</p>
+</blockquote>
+<pre><code class="java">registration.setCachePeriod(getSeconds(this.resourceProperties.getCache().getPeriod()));
+registration.setCacheControl(this.resourceProperties.getCache().getCachecontrol().toHttpCacheControl());
+registration.setUseLastModified(this.resourceProperties.getCache().isUseLastModified());
+</code></pre>
+<h4 id="2-1-5-EnableWebMvcConfiguration-源码"><a href="#2-1-5-EnableWebMvcConfiguration-源码" class="headerlink" title="2.1.5 EnableWebMvcConfiguration 源码"></a>2.1.5 EnableWebMvcConfiguration 源码</h4><pre><code class="java">/*
+SpringBoot 给容器中放 WebMvcConfigurationSupport 组件
+如果自己放了 WebMvcConfigurationSupport 组件，SpringBoot 的 WebMvcAutoConfiguration 都会失效
+ */
+@Configuration(proxyBeanMethods = false)
+@EnableConfigurationProperties(WebProperties.class)
+public static class EnableWebMvcConfiguration extends DelegatingWebMvcConfiguration implements ResourceLoaderAware
+&#123;
+
+&#125;
+</code></pre>
+<p>1、<code>HandlerMapping</code>：根据请求路径 <code>/xxx</code> 找那个 handler 能处理请求。</p>
+<ul>
+<li><p>① <code>WelcomePageHandlerMapping</code>：</p>
+<ul>
+<li><p>(1) 访问 <code>/\*\*</code> 路径下的所有请求，都在以前四个静态资源路径下找，欢迎页也一样。</p>
+</li>
+<li><p>(2) 找 <code>index.html</code>：只要静态资源的位置有一个 <code>index.html</code> 页面，项目启动默认访问。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-1-6-为什么容器中放一个-WebMvcConfigurer-就能配置底层行为"><a href="#2-1-6-为什么容器中放一个-WebMvcConfigurer-就能配置底层行为" class="headerlink" title="2.1.6 为什么容器中放一个 WebMvcConfigurer 就能配置底层行为"></a>2.1.6 为什么容器中放一个 WebMvcConfigurer 就能配置底层行为</h4><p>1、WebMvcAutoConfiguration 是一个自动配置类，它里面有一个 <code>EnableWebMvcConfiguration</code>。</p>
+<p>2、<code>EnableWebMvcConfiguration</code> 继承于 <code>DelegatingWebMvcConfiguration</code>，这两个都生效。</p>
+<p>3、<code>DelegatingWebMvcConfiguration</code> 利用依赖注入把容器中所有 <code>WebMvcConfigurer</code> 注入进来。</p>
+<p>4、别人调用 <code>DelegatingWebMvcConfiguration</code> 的方法配置底层规则，而它调用所有 <code>WebMvcConfigurer</code> 的配置底层方法。</p>
+<h4 id="2-1-7-WebMvcConfigurationSupport"><a href="#2-1-7-WebMvcConfigurationSupport" class="headerlink" title="2.1.7 WebMvcConfigurationSupport"></a>2.1.7 WebMvcConfigurationSupport</h4><p>提供了很多的默认设置。</p>
+<p>判断系统中是否有相应的类：如果有，就加入相应的 <code>HttpMessageConverter</code></p>
+<pre><code class="java">jackson2Present = ClassUtils.isPresent(&quot;com.fasterxml.jackson.databind.ObjectMapper&quot;, classLoader) &amp;&amp;
+    ClassUtils.isPresent(&quot;com.fasterxml.jackson.core.JsonGenerator&quot;, classLoader);
+jackson2XmlPresent = ClassUtils.isPresent(&quot;com.fasterxml.jackson.dataformat.xml.XmlMapper&quot;, classLoader);
+jackson2SmilePresent = ClassUtils.isPresent(&quot;com.fasterxml.jackson.dataformat.smile.SmileFactory&quot;, classLoader);
+</code></pre>
+<h3 id="2-2-Web-场景"><a href="#2-2-Web-场景" class="headerlink" title="2.2 Web 场景"></a>2.2 Web 场景</h3><h4 id="2-2-1-自动配置"><a href="#2-2-1-自动配置" class="headerlink" title="2.2.1 自动配置"></a>2.2.1 自动配置</h4><p>1、整合 web 场景。</p>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>2、引入了 <code>autoconfigure</code> 功能。</p>
+<p>3、<code>@EnableAutoConfiguration</code> 注解使用 <code>@Import(AutoConfigurationImportSelector.class)</code> 批量导入组件。</p>
+<p>4、加载 <code>META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports</code> 文件中配置的所有组件。</p>
+<p>5、所有自动配置类如下。</p>
+<pre><code class="java">org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration
+// ==============以下是响应式 Web 场景==============
+org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration
+org.springframework.boot.autoconfigure.web.reactive.ReactiveMultipartAutoConfiguration
+org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryAutoConfiguration
+org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration
+org.springframework.boot.autoconfigure.web.reactive.WebSessionIdResolverAutoConfiguration
+org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration
+org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration
+org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration
+// ===============================================
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+</code></pre>
+<p>6、绑定了配置文件的一堆配置项。</p>
+<ul>
+<li><p>① SpringMVC 的所有配置 <code>spring.mvc</code>。</p>
+</li>
+<li><p>② Web 场景通用配置 <code>spring.web</code>。</p>
+</li>
+<li><p>③ 文件上传配置 <code>spring.servlet.multipart</code>。</p>
+</li>
+<li><p>④ 服务器的配置 <code>server</code>，比如：编码方式</p>
+</li>
+</ul>
+<h4 id="2-2-2-默认效果"><a href="#2-2-2-默认效果" class="headerlink" title="2.2.2 默认效果"></a>2.2.2 默认效果</h4><p>默认配置：</p>
+<p>1、包含了 <code>ContentNegotiatingViewResolver</code> 和 <code>BeanNameViewResolver</code> 组件，<strong>方便视图解析</strong>。</p>
+<p>2、<strong>默认的静态资源处理机制</strong>：静态资源放在 <code>static</code> 文件夹下即可直接访问。</p>
+<p>3、<strong>自动注册</strong>了 <code>Converter</code>, <code>GenericConverter</code>, <code>Formatter</code> 组件，适配常见<strong>数据类型转换</strong>和<strong>格式化需求</strong>。</p>
+<p>4、<strong>支持</strong> <code>HttpMessageConverters</code>，可以<strong>方便返回</strong> <code>json</code> 等<strong>数据类型</strong>。</p>
+<p>5、<strong>注册</strong> <code>MessageCodesResolver</code>，方便<strong>国际化</strong>及错误消息处理。</p>
+<p>6、<strong>支持静态</strong> <code>index.html</code>。</p>
+<p>7、<strong>自动使用</strong> <code>ConfigurableWebBindingInitializer</code>，实现<strong>消息处理、数据绑定、类型转化、数据校验</strong>等功能。</p>
+<blockquote>
+<p><strong>重要</strong>：</p>
+<ul>
+<li><p>如果想保持 <strong>boot mvc 的默认配置</strong>，并且自定义更多的 mvc 配置，比如：<strong>interceptors</strong>, <strong>formatters</strong>, <strong>view controllers</strong> 等。可以使用 <strong>@Configuration</strong> 注解添加一个 <strong>WebMvcConfigurer</strong> 类型的配置类，并且不要标注 <strong>@EnableWebMvc</strong>。</p>
+</li>
+<li><p>如果想保持 boot mvc 的默认配置，但要自定义核心组件实例，比如：<strong>RequestMappingHandlerMapping</strong>, <strong>RequestMappingHandlerAdapter</strong>, 或 <strong>ExceptionHandlerExceptionResolver</strong>，给容器中放一个 <strong>WebMvcRegistrations</strong> 组件即可。</p>
+</li>
+<li><p>如果想全面接管 Spring MVC，**@Configuration** 标注一个配置类，并加上 <strong>@EnableWebMvc</strong> 注解，实现 <strong>WebMvcConfigurer</strong> 接口。</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="2-3-静态资源"><a href="#2-3-静态资源" class="headerlink" title="2.3 静态资源"></a>2.3 静态资源</h3><h4 id="2-3-1-默认规则"><a href="#2-3-1-默认规则" class="headerlink" title="2.3.1 默认规则"></a>2.3.1 默认规则</h4><h5 id="2-3-1-1-静态资源映射"><a href="#2-3-1-1-静态资源映射" class="headerlink" title="2.3.1.1 静态资源映射"></a>2.3.1.1 静态资源映射</h5><p>静态资源映射规则在 <code>WebMvcAutoConfiguration</code> 中进行了定义：</p>
+<p>1、<code>/webjars/**</code> 的所有路径资源都在 <code>classpath:/META-INF/resources/webjars/</code>。</p>
+<p>2、<code>/**</code> 的所有路径资源都在 <code>classpath:/META-INF/resources/</code>、<code>classpath:/resources/</code>、<code>classpath:/static/</code>、<code>classpath:/public/</code>。</p>
+<p>3、所有静态资源都定义了<code>缓存规则</code>。【浏览器访问过一次，就会缓存一段时间】，但此功能参数无默认值。</p>
+<ul>
+<li><p>① <code>period</code>：缓存间隔，默认 0 秒。</p>
+</li>
+<li><p>② <code>cacheControl</code>：缓存控制，默认无。</p>
+</li>
+<li><p>③ <code>useLastModified</code>：是否使用 lastModified 头，默认 false。</p>
+</li>
+</ul>
+<h5 id="2-3-1-2-静态资源缓存"><a href="#2-3-1-2-静态资源缓存" class="headerlink" title="2.3.1.2 静态资源缓存"></a>2.3.1.2 静态资源缓存</h5><p>如前面所述</p>
+<p>1、所有静态资源都定义了<code>缓存规则</code>。【浏览器访问过一次，就会缓存一段时间】，但此功能参数无默认值。</p>
+<ul>
+<li><p>① <code>period</code>：缓存间隔，默认 0 秒。</p>
+</li>
+<li><p>② <code>cacheControl</code>：缓存控制，默认无。</p>
+</li>
+<li><p>③ <code>useLastModified</code>：是否使用 lastModified 头，默认 false。</p>
+</li>
+</ul>
+<h5 id="2-3-1-3-欢迎页"><a href="#2-3-1-3-欢迎页" class="headerlink" title="2.3.1.3 欢迎页"></a>2.3.1.3 欢迎页</h5><p>欢迎页规则在 <code>WebMvcAutoConfiguration</code> 中进行了定义：</p>
+<p>1、在<strong>静态资源</strong>目录下找 <code>index.html</code> 模板页。</p>
+<p>2、没有就在 <code>templates</code> 下找 <code>index.html</code> 模板页。</p>
+<h5 id="2-3-1-4-Favicon"><a href="#2-3-1-4-Favicon" class="headerlink" title="2.3.1.4 Favicon"></a>2.3.1.4 Favicon</h5><p>1、在静态资源目录下找 <code>favicon.ico</code>。</p>
+<h5 id="2-3-1-5-缓存实验"><a href="#2-3-1-5-缓存实验" class="headerlink" title="2.3.1.5 缓存实验"></a>2.3.1.5 缓存实验</h5><pre><code class="properties">server.port=8080
+
+# 1、spring.web：
+# ① 配置国际化的区域信息
+# ② 静态资源策略（开启、处理链、缓存）
+
+# 开启静态资源映射规则
+spring.web.resources.add-mappings=true
+
+# 设置缓存
+spring.web.resources.cache.period=3600
+
+# 缓存详细合并项控制，覆盖 period 配置
+# 浏览照第一次请求服务器，服务器告诉浏览器此资源缓存 7200 秒，7200 秒以内的所有此资源访问不用发给服务器请求，7200 秒以后发请求给服务器
+spring.web.resources.cache.cachecontrol.max-age=7200
+
+# 共享缓存
+spring.web.resources.cache.cachecontrol.cache-public=true
+
+# 使用资源 last-modified 时间，来对比服务器和浏览照的资源是否相同没有变化，相同返回 304
+spring.web.resources.cache.use-last-modified=true
+</code></pre>
+<h4 id="2-3-2-自定义静态资源规则"><a href="#2-3-2-自定义静态资源规则" class="headerlink" title="2.3.2 自定义静态资源规则"></a>2.3.2 自定义静态资源规则</h4><blockquote>
+<p>自定义静态资源路径、自定义缓存规则。</p>
+</blockquote>
+<h5 id="2-3-2-1-配置方式"><a href="#2-3-2-1-配置方式" class="headerlink" title="2.3.2.1 配置方式"></a>2.3.2.1 配置方式</h5><p><code>spring.mvc</code>：静态资源访问前缀路径。</p>
+<p><code>spring.web</code>：</p>
+<ul>
+<li><p>静态资源目录。</p>
+</li>
+<li><p>静态资源缓存策略。</p>
+</li>
+</ul>
+<pre><code class="properties"># 2、spring.mvc
+# ① 自定义 webjars 路径前缀
+spring.mvc.webjars-path-pattern=/webjars/**
+
+# ② 静态资源访问路径前缀
+spring.mvc.static-path-pattern=/static/**
+</code></pre>
+<h5 id="2-3-2-2-代码方式"><a href="#2-3-2-2-代码方式" class="headerlink" title="2.3.2.2 代码方式"></a>2.3.2.2 代码方式</h5><blockquote>
+<p>容器中只要有一个 WebMvcConfigurer 组件，配置的底层行为都会生效。</p>
+<p>@EnableWebMvc，禁用 boot 的默认配置。</p>
+</blockquote>
+<pre><code class="java">package com.myxh.springboot.web.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.CacheControl;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import java.util.concurrent.TimeUnit;
+
+/**
+ * @author MYXH
+ * @date 2023/9/18
+ */
+// 禁用 Spring Boot 的默认配置
+// @EnableWebMvc
+// 这是一个配置类，给容器中放一个 WebMvcConfigurer 组件，就能自定义底层
+@Configuration
+public class MyConfig implements WebMvcConfigurer
+&#123;
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry)
+    &#123;
+        // 保留默认规则
+        WebMvcConfigurer.super.addResourceHandlers(registry);
+
+        // 新增自定义规则
+        registry.addResourceHandler(&quot;/static/**&quot;)
+                .addResourceLocations(&quot;classpath:/image/, classpath:/static/&quot;)
+                .setCacheControl(CacheControl.maxAge(7200, TimeUnit.SECONDS));
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">package com.myxh.springboot.web.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.CacheControl;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import java.util.concurrent.TimeUnit;
+
+/**
+ * @author MYXH
+ * @date 2023/9/18
+ */
+// 禁用 Spring Boot 的默认配置
+// @EnableWebMvc
+// 这是一个配置类，给容器中放一个 WebMvcConfigurer 组件，就能自定义底层
+@Configuration
+public class MyConfig
+&#123;
+    @Bean
+    public WebMvcConfigurer webMvcConfigurer()
+    &#123;
+        return new WebMvcConfigurer()
+        &#123;
+            /**
+             * 配置静态资源
+             *
+             * @param registry 注册表
+             */
+            @Override
+            public void addResourceHandlers(ResourceHandlerRegistry registry)
+            &#123;
+                // 保留默认规则
+                WebMvcConfigurer.super.addResourceHandlers(registry);
+
+                // 新增自定义规则
+                registry.addResourceHandler(&quot;/static/**&quot;)
+                        .addResourceLocations(&quot;classpath:/image/, classpath:/static/&quot;)
+                        .setCacheControl(CacheControl.maxAge(7200, TimeUnit.SECONDS));
+            &#125;
+        &#125;;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="2-4-路径匹配"><a href="#2-4-路径匹配" class="headerlink" title="2.4 路径匹配"></a>2.4 路径匹配</h3><blockquote>
+<p><strong>Spring5.3</strong> 之后加入了更多的<strong>请求路径匹配</strong>的实现策略。</p>
+<p>以前只支持 <strong>AntPathMatcher</strong> 策略, 现在提供了 <strong>PathPatternParser</strong> 策略，并且可以指定到底使用那种策略。</p>
+</blockquote>
+<h4 id="2-4-1-Ant-风格路径用法"><a href="#2-4-1-Ant-风格路径用法" class="headerlink" title="2.4.1 Ant 风格路径用法"></a>2.4.1 Ant 风格路径用法</h4><p>Ant 风格的路径模式语法具有以下规则：</p>
+<ul>
+<li><p><code>\*</code>：表示<strong>任意数量的字符</strong>。</p>
+</li>
+<li><p><code>?</code>：表示<strong>任意一个字符</strong>。</p>
+</li>
+<li><p><code>\*\*</code>：表示<strong>任意数量的目录</strong>。</p>
+</li>
+<li><p><code>&#123;&#125;</code>：表示一个命名的模式<strong>占位符</strong>。</p>
+</li>
+<li><p><code>[]</code>：表示<code>字符集合</code>，例如<code>[a-z]</code>表示小写字母。</p>
+</li>
+</ul>
+<p>例如：</p>
+<ul>
+<li><p><code>\*.html</code> 匹配任意名称，扩展名为 <code>.html</code> 的文件。</p>
+</li>
+<li><p>&#x2F;<code>folder1/\*/\*.java</code> 匹配在 <code>folder1</code> 目录下的任意两级目录下的 <code>.java</code> 文件。</p>
+</li>
+<li><p><code>/folder2/\*\*/\*.jsp</code> 匹配在 <code>folder2</code> 目录下任意目录深度的 <code>.jsp</code> 文件。</p>
+</li>
+<li><p><code>/&#123;type&#125;/&#123;id&#125;.html</code> 匹配任意文件名为 <code>&#123;id&#125;.html</code>，在任意命名的 <code>&#123;type&#125;</code> 目录下的文件。</p>
+</li>
+</ul>
+<p>注意：Ant 风格的路径模式语法中的特殊字符需要转义，例如：</p>
+<ul>
+<li><p>要匹配文件路径中的星号，则需要转义为<code>\\\\*</code>。</p>
+</li>
+<li><p>要匹配文件路径中的问号，则需要转义为 <code>\\\\?</code>。</p>
+</li>
+</ul>
+<h4 id="2-4-2-模式切换"><a href="#2-4-2-模式切换" class="headerlink" title="2.4.2 模式切换"></a>2.4.2 模式切换</h4><blockquote>
+<p><strong>AntPathMatcher</strong> 与 <strong>PathPatternParser</strong>。</p>
+<p><strong>PathPatternParser</strong> 在 jmh 基准测试下，有 6<del>8 倍吞吐量提升，降低 30%</del>40% 空间分配率。</p>
+<p><strong>PathPatternParser</strong> 兼容 <strong>AntPathMatcher</strong> 语法，并支持更多类型的路径模式。</p>
+<p><strong>PathPatternParser</strong> “<strong>**</strong>“ <strong>多段匹配</strong>的支持<strong>仅允许在模式末尾使用</strong>。</p>
+</blockquote>
+<pre><code class="java">package com.myxh.springboot.web.controller;
+
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author MYXH
+ * @date 2023/9/18
+ */
+@Slf4j
+@RestController
+public class HelloController
+&#123;
+    /**
+     * 默认使用新版 PathPatternParser 进行路径匹配
+     * 不能匹配 ** 在中间的情况，其他情况和 antPathMatcher语法兼容
+     *
+     * @param request 请求
+     * @param path 路径
+     * @return uri
+     */
+    @GetMapping(&quot;/a*/b?/**/&#123;p1:[a-f]+&#125;/**&quot;)
+    public String hello(HttpServletRequest request, @PathVariable(&quot;p1&quot;) String path)
+    &#123;
+        log.info(&quot;路径变量 p1：&#123;&#125;&quot;, path);
+        String uri = request.getRequestURI();
+
+        return uri;
+    &#125;
+&#125;
+</code></pre>
+<p>总结：</p>
+<ul>
+<li><p>使用默认的路径匹配规则，是由 <code>PathPatternParser</code> 提供的。</p>
+</li>
+<li><p>如果路径中间需要有 **，替换成 ant 风格路径。</p>
+</li>
+</ul>
+<h3 id="2-5-内容协商"><a href="#2-5-内容协商" class="headerlink" title="2.5 内容协商"></a>2.5 内容协商</h3><blockquote>
+<p>一套系统适配多端数据返回。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/a10328234c3c4ffe9427243e4dc250a1.png" alt="内容协商"></p>
+</blockquote>
+<h4 id="2-5-1-多端内容适配"><a href="#2-5-1-多端内容适配" class="headerlink" title="2.5.1 多端内容适配"></a>2.5.1 多端内容适配</h4><h5 id="2-5-1-1-默认规则"><a href="#2-5-1-1-默认规则" class="headerlink" title="2.5.1.1 默认规则"></a>2.5.1.1 默认规则</h5><p>1、<strong>SpringBoot 多端内容适配</strong>。</p>
+<ul>
+<li><p>① <strong>基于请求头内容协商</strong>：（默认开启）</p>
+<ul>
+<li><p>(1)客户端向服务端发送请求，携带 HTTP 标准的 <strong>Accept 请求头</strong>。</p>
+<ul>
+<li><p>[1] <strong>Accept</strong>: <code>application/json</code>、<code>text/xml</code>、<code>text/yaml</code>。</p>
+</li>
+<li><p>[2] 服务端根据客户端<strong>请求头期望的数据类型</strong>进行<strong>动态返回</strong>。</p>
+</li>
+</ul>
+</li>
+<li><p>② <strong>基于请求参数内容协商</strong>：（<strong>需要开启</strong>）</p>
+<ul>
+<li><p>[1] 发送请求 <code>GET /projects/spring-boot?format=json</code>。</p>
+</li>
+<li><p>[2] 匹配到 <code>@GetMapping(&quot;/projects/spring-boot&quot;)</code>。</p>
+</li>
+<li><p>[3] 根据<strong>参数协商</strong>，优先返回 json 类型数据 <strong>【需要开启参数匹配设置】</strong>。</p>
+</li>
+<li><p>[4] 发送请求 <code>GET /projects/spring-boot?format=xml</code>，优先返回 xml 类型数据。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-5-1-2-效果演示"><a href="#2-5-1-2-效果演示" class="headerlink" title="2.5.1.2 效果演示"></a>2.5.1.2 效果演示</h5><blockquote>
+<p>请求同一个接口，可以返回 json 和 xml 不同格式数据。</p>
+</blockquote>
+<p>1、引入支持写出 xml 内容依赖。</p>
+<pre><code class="xml">&lt;!-- 支持返回 XML 格式数据 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.fasterxml.jackson.dataformat&lt;/groupId&gt;
+    &lt;artifactId&gt;jackson-dataformat-xml&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>2、标注注解。</p>
+<pre><code class="java">package com.myxh.springboot.web.bean;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author MYXH
+ * @date 2023/9/18
+ */
+// 可以写出为 xml 文档
+@JacksonXmlRootElement
+@Component
+// 和配置文件 person 前缀的所有配置进行绑定
+@ConfigurationProperties(prefix = &quot;user&quot;)
+// 自动生成无参构造器
+@NoArgsConstructor
+// 自动生成全参构造器
+@AllArgsConstructor
+// 自动生成 JavaBean 属性的 getter/setter
+@Data
+public class User
+&#123;
+    private Long id;
+    private String userName;
+    private String password;
+    private Integer age;
+    private String email;
+    private String role;
+&#125;
+</code></pre>
+<p>3、开启基于请求参数的内容协商。</p>
+<pre><code class="properties"># 开启基于请求参数的内容协商功能，默认参数名：format，默认此功能不开启
+spring.mvc.contentnegotiation.favor-parameter=true
+
+# 指定内容协商时使用的参数名，默认是 format
+spring.mvc.contentnegotiation.parameter-name=type
+</code></pre>
+<p>4、效果。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/12a8e780a3514c57962704b02f0276a7.png" alt="效果演示"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/d56d80cd944e45f88fd907fb1d59aa26.png" alt="效果演示"></p>
+<h5 id="2-5-1-3-配置协商规则与支持类型"><a href="#2-5-1-3-配置协商规则与支持类型" class="headerlink" title="2.5.1.3 配置协商规则与支持类型"></a>2.5.1.3 配置协商规则与支持类型</h5><p>1、修改<strong>内容协商方式</strong>。</p>
+<pre><code class="properties"># 开启基于请求参数的内容协商功能，默认参数名：format，默认此功能不开启
+spring.mvc.contentnegotiation.favor-parameter=true
+
+# 指定内容协商时使用的参数名，默认是 format
+spring.mvc.contentnegotiation.parameter-name=type
+</code></pre>
+<p>2、大多数 MediaType 都是开箱即用的。也可以<strong>自定义内容类型</strong>，例如：</p>
+<pre><code class="properties"># 增加一种新的内容类型
+spring.mvc.contentnegotiation.media-types.yaml=text/yaml
+spring.mvc.contentnegotiation.media-types.yml=text/yml
+</code></pre>
+<h4 id="2-5-2-自定义内容返回"><a href="#2-5-2-自定义内容返回" class="headerlink" title="2.5.2 自定义内容返回"></a>2.5.2 自定义内容返回</h4><h5 id="2-5-2-1-增加-yaml-返回支持"><a href="#2-5-2-1-增加-yaml-返回支持" class="headerlink" title="2.5.2.1 增加 yaml 返回支持"></a>2.5.2.1 增加 yaml 返回支持</h5><p>导入依赖。</p>
+<pre><code class="xml">&lt;!-- 支持返回 YAML 格式数据 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.fasterxml.jackson.dataformat&lt;/groupId&gt;
+    &lt;artifactId&gt;jackson-dataformat-yaml&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>把对象写出成 YAML。</p>
+<pre><code class="java">package com.myxh.springboot.web.controller;
+
+import com.myxh.springboot.web.bean.User;
+/**
+ * @author MYXH
+ * @date 2023/9/18
+ */
+public class HelloController
+&#123;
+    public static void main(String[] args) throws JsonProcessingException
+    &#123;
+        User user = new User();
+        user.setId(1L);
+        user.setUserName(&quot;MYXH&quot;);
+        user.setPassword(&quot;520.ILY!&quot;);
+        user.setAge(21);
+        user.setEmail(&quot;1735350920@qq.com&quot;);
+
+        YAMLFactory factory = new YAMLFactory().disable(YAMLGenerator.Feature.WRITE_DOC_START_MARKER);
+        ObjectMapper mapper = new ObjectMapper(factory);
+
+        String userYaml = mapper.writeValueAsString(user);
+        System.out.println(&quot;userYaml = &quot; + userYaml);
+    &#125;
+&#125;
+</code></pre>
+<p>编写配置。</p>
+<pre><code class="properties"># 增加一种新的内容类型
+spring.mvc.contentnegotiation.media-types.yaml=text/yaml
+spring.mvc.contentnegotiation.media-types.yml=text/yml
+</code></pre>
+<p>增加 <code>HttpMessageConverter</code> 组件，专门负责把对象写出为 yaml 格式。</p>
+<pre><code class="java">package com.myxh.springboot.web.config;
+
+import com.myxh.springboot.web.component.MyYamlHttpMessageConverter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import java.util.List;
+
+/**
+ * @author MYXH
+ * @date 2023/9/18
+ */
+// 禁用 Spring Boot 的默认配置
+// @EnableWebMvc
+// 这是一个配置类，给容器中放一个 WebMvcConfigurer 组件，就能自定义底层
+@Configuration
+public class MyConfig
+&#123;
+    @Bean
+    public WebMvcConfigurer webMvcConfigurer()
+    &#123;
+        return new WebMvcConfigurer()
+        &#123;
+            /**
+             * 配置一个能把对象转为 yaml 的 messageConverter
+             *
+             * @param converters 最初是转换器的空列表
+             */
+            @Override
+            public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters)
+            &#123;
+                converters.add(new MyYamlHttpMessageConverter());
+            &#125;
+        &#125;;
+    &#125;
+&#125;
+</code></pre>
+<h5 id="2-5-2-2-思考：如何增加其他"><a href="#2-5-2-2-思考：如何增加其他" class="headerlink" title="2.5.2.2 思考：如何增加其他"></a>2.5.2.2 思考：如何增加其他</h5><ul>
+<li><p>配置媒体类型支持:</p>
+<ul>
+<li><code>spring.mvc.contentnegotiation.media-types.yaml=text/yaml</code>。</li>
+</ul>
+</li>
+<li><p>编写对应的 <code>HttpMessageConverter</code>，要告诉 Boot 这个支持的媒体类型。</p>
+<ul>
+<li>按照 HttpMessageConverter 的示例写法。</li>
+</ul>
+</li>
+<li><p>把 MessageConverter 组件加入到底层。</p>
+<ul>
+<li>容器中放一个 <code>WebMvcConfigurer</code> 组件，并配置底层的 <code>MessageConverter</code>。</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-5-2-3-HttpMessageConverter-的示例写法"><a href="#2-5-2-3-HttpMessageConverter-的示例写法" class="headerlink" title="2.5.2.3 HttpMessageConverter 的示例写法"></a>2.5.2.3 HttpMessageConverter 的示例写法</h5><pre><code class="java">package com.myxh.springboot.web.component;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
+import org.springframework.http.HttpInputMessage;
+import org.springframework.http.HttpOutputMessage;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.AbstractHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.http.converter.HttpMessageNotWritableException;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
+
+/**
+ * @author MYXH
+ * @date 2023/9/18
+ * @description
+ * 自定义的 YAML HTTP 消息转换器
+ * 用于将对象转换为 YAML 格式的内容
+ */
+public class MyYamlHttpMessageConverter extends AbstractHttpMessageConverter&lt;Object&gt;
+&#123;
+    // 将对象转换为 YAML 的 ObjectMapper
+    private final ObjectMapper objectMapper;
+
+    public MyYamlHttpMessageConverter()
+    &#123;
+        // 告诉 SpringBoot 这个 MessageConverter 支持哪种媒体类型
+        super(new MediaType(&quot;text&quot;, &quot;yaml&quot;, StandardCharsets.UTF_8),
+                new MediaType(&quot;text&quot;, &quot;yml&quot;, StandardCharsets.UTF_8));
+
+        // 创建 YAMLFactory 并禁用写入文档起始标记
+        YAMLFactory factory = new YAMLFactory().
+                disable(YAMLGenerator.Feature.WRITE_DOC_START_MARKER);
+        this.objectMapper = new ObjectMapper(factory);
+    &#125;
+
+    /**
+     * 判断该转换器是否支持将指定类型的对象转换为 YAML
+     *
+     * @param clazz 要测试支持的类
+     * @return 如果支持转换，则返回 true；否则返回 false
+     */
+    @Override
+    protected boolean supports(Class&lt;?&gt; clazz)
+    &#123;
+        // 只要是对象类型，不是基本类型和数组类型，都支持
+        return !clazz.isPrimitive() &amp;&amp; !clazz.isArray();
+    &#125;
+
+    /**
+     * 从 HTTP 输入消息中读取数据并将其转换为指定类型的对象
+     * &#123;@code @RequestBody&#125; 把对象怎么读进来
+     *
+     * @param clazz        要返回的对象类型
+     * @param inputMessage 要从中读取的 HTTP 输入消息
+     * @return 转换后的对象
+     * @throws IOException                     IO 异常
+     * @throws HttpMessageNotReadableException Http 消息不可读异常
+     */
+    @Override
+    protected Object readInternal(Class&lt;?&gt; clazz, HttpInputMessage inputMessage) throws IOException, HttpMessageNotReadableException
+    &#123;
+        return objectMapper.readValue(inputMessage.getBody(), clazz);
+    &#125;
+
+    /**
+     * 将指定对象写入 HTTP 输出消息
+     * &#123;@code @ResponseBody&#125; 把对象怎么写出去
+     *
+     * @param methodReturnValue 要写入输出消息的对象
+     * @param outputMessage     要写入的 HTTP 输出消息
+     * @throws IOException                     IO 异常
+     * @throws HttpMessageNotWritableException Http 消息不可写入异常
+     */
+    @Override
+    protected void writeInternal(Object methodReturnValue, HttpOutputMessage outputMessage) throws IOException, HttpMessageNotWritableException
+    &#123;
+        // 使用 try-with-resources 语句以自动关闭流
+        try (OutputStream os = outputMessage.getBody())
+        &#123;
+            this.objectMapper.writeValue(os, methodReturnValue);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h4 id="2-5-3-内容协商原理-HttpMessageConverter"><a href="#2-5-3-内容协商原理-HttpMessageConverter" class="headerlink" title="2.5.3 内容协商原理 HttpMessageConverter"></a>2.5.3 内容协商原理 HttpMessageConverter</h4><blockquote>
+<p><strong>HttpMessageConverter</strong> 怎么工作？合适工作？</p>
+<p>定制 <strong>HttpMessageConverter</strong> 来实现多端内容协商。</p>
+<p>编写 <strong>WebMvcConfigurer</strong> 提供的 <strong>configureMessageConverters</strong> 底层，修改底层的 <strong>MessageConverter</strong>。</p>
+</blockquote>
+<h5 id="2-5-3-1-ResponseBody-由-HttpMessageConverter-处理"><a href="#2-5-3-1-ResponseBody-由-HttpMessageConverter-处理" class="headerlink" title="2.5.3.1 @ResponseBody 由 HttpMessageConverter 处理"></a>2.5.3.1 @ResponseBody 由 HttpMessageConverter 处理</h5><blockquote>
+<p>标注了 <strong>@ResponseBody</strong> 的返回值 将会由支持它的 <strong>HttpMessageConverter</strong> 写给浏览器。</p>
+</blockquote>
+<p>1、如果 controller 方法的返回值标注了 <code>@ResponseBody</code> 注解。</p>
+<ul>
+<li><p>① 请求进来先来到 <code>DispatcherServlet</code> 的 <code>doDispatch()</code> 进行处理。</p>
+</li>
+<li><p>② 找到一个 <code>HandlerAdapter</code> 适配器，利用适配器执行目标方法。</p>
+</li>
+<li><p>③ <code>RequestMappingHandlerAdapter</code> 来执行，调用 <code>invokeHandlerMethod()</code> 来执行目标方法。</p>
+</li>
+<li><p>④ 目标方法执行之前，准备好两个东西。</p>
+<ul>
+<li><p>(1) <code>HandlerMethodArgumentResolver</code>：参数解析器，确定目标方法每个参数值。</p>
+</li>
+<li><p>(2) <code>HandlerMethodReturnValueHandler</code>：返回值处理器，确定目标方法的返回值改怎么处理。</p>
+</li>
+</ul>
+</li>
+<li><p>⑤ <code>RequestMappingHandlerAdapter</code> 里面的 <code>invokeAndHandle()</code> 真正执行目标方法。</p>
+</li>
+<li><p>⑥ 目标方法执行完成，会返回<strong>返回值对象</strong>。</p>
+</li>
+<li><p>⑦ <strong>找到一个合适的返回值处理器</strong> <code>HandlerMethodReturnValueHandler</code>。</p>
+</li>
+<li><p>⑧ 最终找到 <code>RequestResponseBodyMethodProcessor</code> 能处理标注了 <code>@ResponseBody</code> 注解的方法。</p>
+</li>
+<li><p>⑨ <code>RequestResponseBodyMethodProcessor</code> 调用 <code>writeWithMessageConverters</code>，利用 <code>MessageConverter</code> 把返回值写出去。</p>
+</li>
+</ul>
+<blockquote>
+<p>上面解释：**@ResponseBody** 由 <strong>HttpMessageConverter</strong> 处理。</p>
+</blockquote>
+<p>2、<code>HttpMessageConverter</code> 会<strong>先进行内容协商</strong>。</p>
+<ul>
+<li><p>① 遍历所有的 <code>MessageConverter</code> 看谁支持这种<strong>内容类型的数据</strong>。</p>
+</li>
+<li><p>② 默认 <code>MessageConverter</code> 有以下 10 个。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/58a61c3be2674784b514287884e87995.png" alt="@ResponseBody 由 HttpMessageConverter 处理"></p>
+</li>
+<li><p>③ 最终因为要 <code>json</code> 所以 <code>MappingJackson2HttpMessageConverter</code> 支持写出 json。</p>
+</li>
+<li><p>④ jackson 用 <code>ObjectMapper</code> 把对象写出去。</p>
+</li>
+</ul>
+<h5 id="2-5-3-2-WebMvcAutoConfiguration-提供几种默认-HttpMessageConverters"><a href="#2-5-3-2-WebMvcAutoConfiguration-提供几种默认-HttpMessageConverters" class="headerlink" title="2.5.3.2 WebMvcAutoConfiguration 提供几种默认 HttpMessageConverters"></a>2.5.3.2 WebMvcAutoConfiguration 提供几种默认 HttpMessageConverters</h5><ul>
+<li><p><code>EnableWebMvcConfiguration</code> 通过 <code>addDefaultHttpMessageConverters</code> 添加了默认的 <code>MessageConverter</code>，如下：</p>
+<ul>
+<li><p><code>ByteArrayHttpMessageConverter</code>：支持字节数据读写。</p>
+</li>
+<li><p><code>StringHttpMessageConverter</code>：支持字符串读写。</p>
+</li>
+<li><p><code>ResourceHttpMessageConverter</code>：支持资源读写。</p>
+</li>
+<li><p><code>ResourceRegionHttpMessageConverter</code>: 支持分区资源写出。</p>
+</li>
+<li><p><code>AllEncompassingFormHttpMessageConverter</code>：支持表单 xml&#x2F;json 读写。</p>
+</li>
+<li><p><code>MappingJackson2HttpMessageConverter</code>：支持请求响应体 Json 读写。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>默认 <code>MessageConverter</code> 有以下 8 个：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/b7ae4301f317437283c75ec7330235bd.png" alt="WebMvcAutoConfiguration 提供几种默认 HttpMessageConverters"></p>
+<blockquote>
+<p>系统提供默认的 MessageConverter 功能有限，仅用于 json 或者普通返回数据。额外增加新的内容协商功能，必须增加新的 <strong>HttpMessageConverter</strong>。</p>
+</blockquote>
+<h3 id="2-6-模板引擎"><a href="#2-6-模板引擎" class="headerlink" title="2.6 模板引擎"></a>2.6 模板引擎</h3><blockquote>
+<p>由于 <strong>SpringBoot</strong> 使用了<strong>嵌入式 Servlet 容器</strong>。所以 <strong>JSP</strong> 默认是<strong>不能使用的</strong>。</p>
+<p>如果需要<strong>服务端页面渲染</strong>，优先考虑使用<strong>模板引擎</strong>。</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/87e293d7ccb74b9bb36241a6aaddf0dd.png" alt="模板引擎"></p>
+<p><strong>模板引擎</strong>页面默认放在 <strong>src&#x2F;main&#x2F;resources&#x2F;templates</strong>。</p>
+<p><strong>SpringBoot</strong> 包含以下模板引擎的自动配置。</p>
+<ul>
+<li><p>FreeMarker</p>
+</li>
+<li><p>Groovy</p>
+</li>
+<li><p><strong>Thymeleaf</strong></p>
+</li>
+<li><p>Mustache</p>
+</li>
+</ul>
+<p><strong>Thymeleaf 官网</strong>：<a target="_blank" rel="noopener" href="https://www.thymeleaf.org/">https://www.thymeleaf.org/</a> 。</p>
+<h4 id="2-6-1-Thymeleaf-整合"><a href="#2-6-1-Thymeleaf-整合" class="headerlink" title="2.6.1 Thymeleaf 整合"></a>2.6.1 Thymeleaf 整合</h4><pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>自动配置原理：</p>
+<p>1、开启了 <code>org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration</code> 自动配置。</p>
+<p>2、属性绑定在 <code>ThymeleafProperties</code> 中，对应配置文件 <code>spring.thymeleaf</code> 内容。</p>
+<p>3、所有的模板页面默认在 <code>classpath:/templates/</code> 文件夹下。</p>
+<p>4、默认效果。</p>
+<ul>
+<li><p>① 所有的模板页面在 <code>classpath:/templates/</code> 下面找。</p>
+</li>
+<li><p>② 找后缀名为 <code>.html</code> 的页面。</p>
+</li>
+</ul>
+<h4 id="2-6-2-基础语法"><a href="#2-6-2-基础语法" class="headerlink" title="2.6.2 基础语法"></a>2.6.2 基础语法</h4><h5 id="2-6-2-1-核心用法"><a href="#2-6-2-1-核心用法" class="headerlink" title="2.6.2.1 核心用法"></a>2.6.2.1 核心用法</h5><p><code>th:xxx</code>：<strong>动态渲染指定的 html 标签属性值、或者 th 指令（遍历、判断等）</strong>。</p>
+<ul>
+<li><p><code>th:text</code>：标签体内文本值渲染。</p>
+<ul>
+<li><code>th:utext</code>：不会转义，显示为 html 原本的样子。</li>
+</ul>
+</li>
+<li><p><code>th:属性</code>：标签指定属性渲染。</p>
+</li>
+<li><p><code>th:attr</code>：标签任意属性渲染。</p>
+</li>
+<li><p><code>th:if</code>、<code>th:each</code> <code>...</code> ：其他 th 指令。</p>
+</li>
+<li><p>例如：</p>
+</li>
+</ul>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;欢迎页&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;你好，&lt;span th:utext=&quot;$&#123;message&#125;&quot;&gt;&lt;/span&gt;&lt;/h1&gt;
+
+    &lt;hr /&gt;
+
+    &lt;h2&gt;1、Thymeleaf 基础语法&lt;/h2&gt;
+
+    &lt;h3&gt;1.1 th:text：替换标签体的内容，会转义&lt;/h3&gt;
+    &lt;p th:text=&quot;$&#123;message&#125;&quot;&gt;&lt;/p&gt;
+
+    &lt;h3&gt;
+      1.2 th:utext: 替换标签体的内容，不会转义 html 标签，真正显示为 html
+      该有的样式
+    &lt;/h3&gt;
+    &lt;p th:utext=&quot;$&#123;message&#125;&quot;&gt;&lt;/p&gt;
+
+    &lt;h3&gt;1.3 th:任意 html 属性，动态替换任意属性的值&lt;/h3&gt;
+    &lt;img
+      th:src=&quot;@&#123;$&#123;imageUrl&#125;&#125;&quot;
+      src=&quot;大户爱.png&quot;
+      style=&quot;width:300px;&quot;
+      alt=&quot;大户爱&quot;
+    /&gt;
+
+    &lt;h3&gt;1.4 th:attr：任意属性指定&lt;/h3&gt;
+    &lt;img
+      th:attr=&quot;src=@&#123;$&#123;imageUrl&#125;&#125;,style=$&#123;style&#125;&quot;
+      src=&quot;大户爱.png&quot;
+      alt=&quot;大户爱&quot;
+    /&gt;
+
+    &lt;h3&gt;1.5 th：其他指令&lt;/h3&gt;
+    &lt;img
+      th:src=&quot;@&#123;$&#123;imageUrl&#125;&#125;&quot;
+      th:style=&quot;$&#123;style&#125;&quot;
+      th:if=&quot;$&#123;show&#125;&quot;
+      src=&quot;大户爱.png&quot;
+      alt=&quot;大户爱&quot;
+    /&gt;
+
+    &lt;h3&gt;1.6 @&#123;&#125; 专门用来取各种路径&lt;/h3&gt;
+    &lt;img
+      th:src=&quot;@&#123;$&#123;imageUrl&#125;&#125;&quot;
+      src=&quot;大户爱.png&quot;
+      style=&quot;width:300px;&quot;
+      alt=&quot;大户爱&quot;
+    /&gt;
+
+    &lt;h3&gt;1.7 字符串转换为大写&lt;/h3&gt;
+    &lt;p th:text=&quot;$
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Xiamou</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/10/09/SpringBoot3%20%E5%85%A8%E6%A0%88%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202023%E5%B9%B4/">http://example.com/2023/10/09/SpringBoot3%20%E5%85%A8%E6%A0%88%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202023%E5%B9%B4/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">X</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a><a class="post-meta__tags" href="/tags/Springboot/">Springboot</a></div><div class="post_share"><div class="social-share" data-image="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/09/12/Jmeter%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" title="微服务保护-Jmeter测压"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">微服务保护-Jmeter测压</div></div></a></div><div class="next-post pull-right"><a href="/2023/10/16/day06-%E6%95%B0%E6%8D%AE%E5%BA%93-MySQL/" title="Javaweb-06"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/image-20231026211001412.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Javaweb-06</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/08/12/day04-SpringBootWeb%E5%85%A5%E9%97%A8/" title="Javaweb-04"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_8b995f15dbea5c87eb36571ef75128e6_250021544_oE9Cr8AXAIybKbrPekhkAYCyeAQAgA01nL6KDg~tplv-dy-aweme-images_q75" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-12</div><div class="title">Javaweb-04</div></div></a></div><div><a href="/2023/08/24/day05-SpringBootWeb%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/" title="Javaweb-05"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_4da64dc0c0fb62ee3ff3fb3b94a16db3_-431180562_c734fe63d18c487ea2479faf68789b79~tplv-dy-lqen-new_1456_816_q75" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-24</div><div class="title">Javaweb-05</div></div></a></div><div><a href="/2023/09/12/Jmeter%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" title="微服务保护-Jmeter测压"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-12</div><div class="title">微服务保护-Jmeter测压</div></div></a></div><div><a href="/2023/09/12/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/" title="SpringCloud-微服务保护"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/image-20231026211001412.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-12</div><div class="title">SpringCloud-微服务保护</div></div></a></div><div><a href="/2023/07/22/day01-HTML-CSS/" title="Javaweb-01"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-22</div><div class="title">Javaweb-01</div></div></a></div><div><a href="/2023/07/23/day02-JavaScript-Vue/" title="Javaweb-02"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_870454b4ff78122679656681b8b1cc05_1940175742_edfcee39e6cd43c2a39440a69f0bd65c~tplv-dy-lqen-new_1456_816_q75" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-23</div><div class="title">Javaweb-02</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://reggie-xiamou.oss-cn-beijing.aliyuncs.com/other/QQ%E5%9B%BE%E7%89%8720230721130300.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xiamou</div><div class="author-info__description">漂泊在平庸的海</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xiamou7777777"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xiamou7777777" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/2449882380@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2449882380&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到夏某的博客!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringBoot3-%E5%85%A8%E6%A0%88%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2023-%E5%B9%B4"><span class="toc-number">1.</span> <span class="toc-text">SpringBoot3 全栈指南教程——尚硅谷学习笔记 2023 年</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Spring-Boot-3-%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7"><span class="toc-number">2.</span> <span class="toc-text">一、Spring Boot 3-核心特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC-1-%E7%AB%A0-SpringBoot3-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">2.1.</span> <span class="toc-text">第 1 章 SpringBoot3-快速入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%AE%80%E4%BB%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.1 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">1.1.1 前置知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2-%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-number">2.1.1.2.</span> <span class="toc-text">1.1.2 环境要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-3-SpringBoot-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">2.1.1.3.</span> <span class="toc-text">1.1.3 SpringBoot 是什么</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%BF%AB%E9%80%9F%E4%BD%93%E9%AA%8C"><span class="toc-number">2.1.2.</span> <span class="toc-text">1.2 快速体验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">1.2.1 开发流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-1-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.1.2.1.1.</span> <span class="toc-text">1.2.1.1 创建项目</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-2-%E5%AF%BC%E5%85%A5%E5%9C%BA%E6%99%AF"><span class="toc-number">2.1.2.1.2.</span> <span class="toc-text">1.2.1.2 导入场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-3-%E4%B8%BB%E7%A8%8B%E5%BA%8F"><span class="toc-number">2.1.2.1.3.</span> <span class="toc-text">1.2.1.3 主程序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-4-%E4%B8%9A%E5%8A%A1"><span class="toc-number">2.1.2.1.4.</span> <span class="toc-text">1.2.1.4 业务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-5-%E6%B5%8B%E8%AF%95"><span class="toc-number">2.1.2.1.5.</span> <span class="toc-text">1.2.1.5 测试</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-6-%E6%89%93%E5%8C%85"><span class="toc-number">2.1.2.1.6.</span> <span class="toc-text">1.2.1.6 打包</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2-%E7%89%B9%E6%80%A7%E5%B0%8F%E7%BB%93"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">1.2.2 特性小结</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-1-%E7%AE%80%E5%8C%96%E6%95%B4%E5%90%88"><span class="toc-number">2.1.2.2.1.</span> <span class="toc-text">1.2.2.1 简化整合</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-2-%E7%AE%80%E5%8C%96%E5%BC%80%E5%8F%91"><span class="toc-number">2.1.2.2.2.</span> <span class="toc-text">1.2.2.2 简化开发</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-3-%E7%AE%80%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.2.2.3.</span> <span class="toc-text">1.2.2.3 简化配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-4-%E7%AE%80%E5%8C%96%E9%83%A8%E7%BD%B2"><span class="toc-number">2.1.2.2.4.</span> <span class="toc-text">1.2.2.4 简化部署</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-5-%E7%AE%80%E5%8C%96%E8%BF%90%E7%BB%B4"><span class="toc-number">2.1.2.2.5.</span> <span class="toc-text">1.2.2.5 简化运维</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-6-Spring-Initializr-%E5%88%9B%E5%BB%BA%E5%90%91%E5%AF%BC"><span class="toc-number">2.1.2.2.6.</span> <span class="toc-text">1.2.2.6 Spring Initializr 创建向导</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%BA%94%E7%94%A8%E5%88%86%E6%9E%90"><span class="toc-number">2.1.3.</span> <span class="toc-text">1.3 应用分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-1-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">1.3.1 依赖管理机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-2-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E6%9C%BA%E5%88%B6"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">1.3.2 自动配置机制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-1-%E5%88%9D%E6%AD%A5%E7%90%86%E8%A7%A3"><span class="toc-number">2.1.3.2.1.</span> <span class="toc-text">1.3.2.1 初步理解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-2-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B"><span class="toc-number">2.1.3.2.2.</span> <span class="toc-text">1.3.2.2 完整流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-3-%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD-SpringBoot"><span class="toc-number">2.1.3.2.3.</span> <span class="toc-text">1.3.2.3 如何学好 SpringBoot</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E6%A0%B8%E5%BF%83%E6%8A%80%E8%83%BD"><span class="toc-number">2.1.4.</span> <span class="toc-text">1.4 核心技能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-1-%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-number">2.1.4.1.</span> <span class="toc-text">1.4.1 常用注解</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-1-1-%E7%BB%84%E4%BB%B6%E6%B3%A8%E5%86%8C"><span class="toc-number">2.1.4.1.1.</span> <span class="toc-text">1.4.1.1 组件注册</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-1-2-%E6%9D%A1%E4%BB%B6%E6%B3%A8%E8%A7%A3"><span class="toc-number">2.1.4.1.2.</span> <span class="toc-text">1.4.1.2 条件注解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-1-3-%E5%B1%9E%E6%80%A7%E7%BB%91%E5%AE%9A"><span class="toc-number">2.1.4.1.3.</span> <span class="toc-text">1.4.1.3 属性绑定</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-2-YAML-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">2.1.4.2.</span> <span class="toc-text">1.4.2 YAML 配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-2-1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">2.1.4.2.1.</span> <span class="toc-text">1.4.2.1. 基本语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-2-2-%E7%A4%BA%E4%BE%8B"><span class="toc-number">2.1.4.2.2.</span> <span class="toc-text">1.4.2.2 示例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-2-3-%E7%BB%86%E8%8A%82"><span class="toc-number">2.1.4.2.3.</span> <span class="toc-text">1.4.2.3 细节</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-2-4-%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%9Alombok"><span class="toc-number">2.1.4.2.4.</span> <span class="toc-text">1.4.2.4. 小技巧：lombok</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-3-%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.4.3.</span> <span class="toc-text">1.4.3 日志配置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-1-%E7%AE%80%E4%BB%8B"><span class="toc-number">2.1.4.3.1.</span> <span class="toc-text">1.4.3.1 简介</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-2-%E6%97%A5%E5%BF%97%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.4.3.2.</span> <span class="toc-text">1.4.3.2 日志格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-3-%E8%AE%B0%E5%BD%95%E6%97%A5%E5%BF%97"><span class="toc-number">2.1.4.3.3.</span> <span class="toc-text">1.4.3.3 记录日志</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-4-%E6%97%A5%E5%BF%97%E7%BA%A7%E5%88%AB"><span class="toc-number">2.1.4.3.4.</span> <span class="toc-text">1.4.3.4 日志级别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-5-%E6%97%A5%E5%BF%97%E5%88%86%E7%BB%84"><span class="toc-number">2.1.4.3.5.</span> <span class="toc-text">1.4.3.5 日志分组</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-6-%E6%96%87%E4%BB%B6%E8%BE%93%E5%87%BA"><span class="toc-number">2.1.4.3.6.</span> <span class="toc-text">1.4.3.6 文件输出</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-7-%E6%96%87%E4%BB%B6%E5%BD%92%E6%A1%A3%E4%B8%8E%E6%BB%9A%E5%8A%A8%E5%88%87%E5%89%B2"><span class="toc-number">2.1.4.3.7.</span> <span class="toc-text">1.4.3.7 文件归档与滚动切割</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-8-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.4.3.8.</span> <span class="toc-text">1.4.3.8 自定义配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-9-%E5%88%87%E6%8D%A2%E6%97%A5%E5%BF%97%E7%BB%84%E5%90%88"><span class="toc-number">2.1.4.3.9.</span> <span class="toc-text">1.4.3.9 切换日志组合</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-10-%E6%9C%80%E4%BD%B3%E5%AE%9E%E6%88%98"><span class="toc-number">2.1.4.3.10.</span> <span class="toc-text">1.4.3.10 最佳实战</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC-2-%E7%AB%A0-SpringBoot3-Web-%E5%BC%80%E5%8F%91"><span class="toc-number">2.2.</span> <span class="toc-text">第 2 章 SpringBoot3-Web 开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-WebMvcAutoConfiguration-%E5%8E%9F%E7%90%86"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1 WebMvcAutoConfiguration 原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-%E7%94%9F%E6%95%88%E6%9D%A1%E4%BB%B6"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">2.1.1 生效条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-%E6%95%88%E6%9E%9C"><span class="toc-number">2.2.1.2.</span> <span class="toc-text">2.1.2 效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-WebMvcConfigurer-%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.2.1.3.</span> <span class="toc-text">2.1.3 WebMvcConfigurer 接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-4-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%A7%84%E5%88%99%E6%BA%90%E7%A0%81"><span class="toc-number">2.2.1.4.</span> <span class="toc-text">2.1.4 静态资源规则源码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-5-EnableWebMvcConfiguration-%E6%BA%90%E7%A0%81"><span class="toc-number">2.2.1.5.</span> <span class="toc-text">2.1.5 EnableWebMvcConfiguration 源码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-6-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%94%BE%E4%B8%80%E4%B8%AA-WebMvcConfigurer-%E5%B0%B1%E8%83%BD%E9%85%8D%E7%BD%AE%E5%BA%95%E5%B1%82%E8%A1%8C%E4%B8%BA"><span class="toc-number">2.2.1.6.</span> <span class="toc-text">2.1.6 为什么容器中放一个 WebMvcConfigurer 就能配置底层行为</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-7-WebMvcConfigurationSupport"><span class="toc-number">2.2.1.7.</span> <span class="toc-text">2.1.7 WebMvcConfigurationSupport</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Web-%E5%9C%BA%E6%99%AF"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2 Web 场景</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">2.2.1 自动配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E9%BB%98%E8%AE%A4%E6%95%88%E6%9E%9C"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">2.2.2 默认效果</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.3 静态资源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E9%BB%98%E8%AE%A4%E8%A7%84%E5%88%99"><span class="toc-number">2.2.3.1.</span> <span class="toc-text">2.3.1 默认规则</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-1-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84"><span class="toc-number">2.2.3.1.1.</span> <span class="toc-text">2.3.1.1 静态资源映射</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-2-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98"><span class="toc-number">2.2.3.1.2.</span> <span class="toc-text">2.3.1.2 静态资源缓存</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-3-%E6%AC%A2%E8%BF%8E%E9%A1%B5"><span class="toc-number">2.2.3.1.3.</span> <span class="toc-text">2.3.1.3 欢迎页</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-4-Favicon"><span class="toc-number">2.2.3.1.4.</span> <span class="toc-text">2.3.1.4 Favicon</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-5-%E7%BC%93%E5%AD%98%E5%AE%9E%E9%AA%8C"><span class="toc-number">2.2.3.1.5.</span> <span class="toc-text">2.3.1.5 缓存实验</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%A7%84%E5%88%99"><span class="toc-number">2.2.3.2.</span> <span class="toc-text">2.3.2 自定义静态资源规则</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-2-1-%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-number">2.2.3.2.1.</span> <span class="toc-text">2.3.2.1 配置方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-2-2-%E4%BB%A3%E7%A0%81%E6%96%B9%E5%BC%8F"><span class="toc-number">2.2.3.2.2.</span> <span class="toc-text">2.3.2.2 代码方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E8%B7%AF%E5%BE%84%E5%8C%B9%E9%85%8D"><span class="toc-number">2.2.4.</span> <span class="toc-text">2.4 路径匹配</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-1-Ant-%E9%A3%8E%E6%A0%BC%E8%B7%AF%E5%BE%84%E7%94%A8%E6%B3%95"><span class="toc-number">2.2.4.1.</span> <span class="toc-text">2.4.1 Ant 风格路径用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-2-%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2"><span class="toc-number">2.2.4.2.</span> <span class="toc-text">2.4.2 模式切换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E5%86%85%E5%AE%B9%E5%8D%8F%E5%95%86"><span class="toc-number">2.2.5.</span> <span class="toc-text">2.5 内容协商</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-1-%E5%A4%9A%E7%AB%AF%E5%86%85%E5%AE%B9%E9%80%82%E9%85%8D"><span class="toc-number">2.2.5.1.</span> <span class="toc-text">2.5.1 多端内容适配</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-1-1-%E9%BB%98%E8%AE%A4%E8%A7%84%E5%88%99"><span class="toc-number">2.2.5.1.1.</span> <span class="toc-text">2.5.1.1 默认规则</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-1-2-%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA"><span class="toc-number">2.2.5.1.2.</span> <span class="toc-text">2.5.1.2 效果演示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-1-3-%E9%85%8D%E7%BD%AE%E5%8D%8F%E5%95%86%E8%A7%84%E5%88%99%E4%B8%8E%E6%94%AF%E6%8C%81%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.5.1.3.</span> <span class="toc-text">2.5.1.3 配置协商规则与支持类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-2-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%86%85%E5%AE%B9%E8%BF%94%E5%9B%9E"><span class="toc-number">2.2.5.2.</span> <span class="toc-text">2.5.2 自定义内容返回</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-2-1-%E5%A2%9E%E5%8A%A0-yaml-%E8%BF%94%E5%9B%9E%E6%94%AF%E6%8C%81"><span class="toc-number">2.2.5.2.1.</span> <span class="toc-text">2.5.2.1 增加 yaml 返回支持</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-2-2-%E6%80%9D%E8%80%83%EF%BC%9A%E5%A6%82%E4%BD%95%E5%A2%9E%E5%8A%A0%E5%85%B6%E4%BB%96"><span class="toc-number">2.2.5.2.2.</span> <span class="toc-text">2.5.2.2 思考：如何增加其他</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-2-3-HttpMessageConverter-%E7%9A%84%E7%A4%BA%E4%BE%8B%E5%86%99%E6%B3%95"><span class="toc-number">2.2.5.2.3.</span> <span class="toc-text">2.5.2.3 HttpMessageConverter 的示例写法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-3-%E5%86%85%E5%AE%B9%E5%8D%8F%E5%95%86%E5%8E%9F%E7%90%86-HttpMessageConverter"><span class="toc-number">2.2.5.3.</span> <span class="toc-text">2.5.3 内容协商原理 HttpMessageConverter</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-3-1-ResponseBody-%E7%94%B1-HttpMessageConverter-%E5%A4%84%E7%90%86"><span class="toc-number">2.2.5.3.1.</span> <span class="toc-text">2.5.3.1 @ResponseBody 由 HttpMessageConverter 处理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-3-2-WebMvcAutoConfiguration-%E6%8F%90%E4%BE%9B%E5%87%A0%E7%A7%8D%E9%BB%98%E8%AE%A4-HttpMessageConverters"><span class="toc-number">2.2.5.3.2.</span> <span class="toc-text">2.5.3.2 WebMvcAutoConfiguration 提供几种默认 HttpMessageConverters</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="toc-number">2.2.6.</span> <span class="toc-text">2.6 模板引擎</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-1-Thymeleaf-%E6%95%B4%E5%90%88"><span class="toc-number">2.2.6.1.</span> <span class="toc-text">2.6.1 Thymeleaf 整合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-2-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">2.2.6.2.</span> <span class="toc-text">2.6.2 基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-6-2-1-%E6%A0%B8%E5%BF%83%E7%94%A8%E6%B3%95"><span class="toc-number">2.2.6.2.1.</span> <span class="toc-text">2.6.2.1 核心用法</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/10/16/day08-Mybatis/" title="Javaweb-day08"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_687056d184063bd48b8a3cc74d9eb9a4_1310239863_2172878365" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Javaweb-day08"/></a><div class="content"><a class="title" href="/2023/10/16/day08-Mybatis/" title="Javaweb-day08">Javaweb-day08</a><time datetime="2023-10-16T10:25:30.000Z" title="发表于 2023-10-16 18:25:30">2023-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/16/day07-Mybatis%E7%9A%84%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="Javaweb-day07"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/image-20231026211001412.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Javaweb-day07"/></a><div class="content"><a class="title" href="/2023/10/16/day07-Mybatis%E7%9A%84%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="Javaweb-day07">Javaweb-day07</a><time datetime="2023-10-16T09:25:30.000Z" title="发表于 2023-10-16 17:25:30">2023-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/16/day06-%E6%95%B0%E6%8D%AE%E5%BA%93-MySQL/" title="Javaweb-06"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/image-20231026211001412.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Javaweb-06"/></a><div class="content"><a class="title" href="/2023/10/16/day06-%E6%95%B0%E6%8D%AE%E5%BA%93-MySQL/" title="Javaweb-06">Javaweb-06</a><time datetime="2023-10-16T07:25:30.000Z" title="发表于 2023-10-16 15:25:30">2023-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/09/SpringBoot3%20%E5%85%A8%E6%A0%88%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202023%E5%B9%B4/" title="SpringBoot3"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SpringBoot3"/></a><div class="content"><a class="title" href="/2023/10/09/SpringBoot3%20%E5%85%A8%E6%A0%88%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202023%E5%B9%B4/" title="SpringBoot3">SpringBoot3</a><time datetime="2023-10-09T11:25:30.000Z" title="发表于 2023-10-09 19:25:30">2023-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/12/Jmeter%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" title="微服务保护-Jmeter测压"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/_538cab634bca8ec49cf0465160973115_-192963750_c294215ddd724dc8bef0461a7cd009ba~tplv-dy-lqen-new_1920_1080_q80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微服务保护-Jmeter测压"/></a><div class="content"><a class="title" href="/2023/09/12/Jmeter%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" title="微服务保护-Jmeter测压">微服务保护-Jmeter测压</a><time datetime="2023-09-12T08:30:30.000Z" title="发表于 2023-09-12 16:30:30">2023-09-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Xiamou</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
