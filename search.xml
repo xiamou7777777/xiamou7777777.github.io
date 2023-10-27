@@ -365,31 +365,6 @@
     
     
     <entry>
-      <title>Web开发介绍</title>
-      <link href="/2023/06/30/Web%E5%BC%80%E5%8F%91%E4%BB%8B%E7%BB%8D/"/>
-      <url>/2023/06/30/Web%E5%BC%80%E5%8F%91%E4%BB%8B%E7%BB%8D/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Web开发介绍"><a href="#Web开发介绍" class="headerlink" title="Web开发介绍"></a>Web开发介绍</h1><h1 id="1-什么是web开发"><a href="#1-什么是web开发" class="headerlink" title="1 什么是web开发"></a>1 什么是web开发</h1><p><strong>Web</strong>：全球广域网，也称为<strong>万维网</strong>(www <strong>W</strong>orld <strong>W</strong>ide <strong>W</strong>eb)，能够通过浏览器访问的<strong>网站</strong>。</p><p>所以<strong>Web开发</strong>说白了，就是<strong>开发网站</strong>的，例如下图所示的网站：<strong>淘宝</strong>，<strong>京东</strong>等等</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667546541068.png"></p><p>那么我们知道了web开发是开发网站的，那么我们需要学习哪些知识呢？以及这些知识在我们整个网站开发中占据什么位置呢？对于这些问题，我们就必须知道网站整体的工作流程。</p><h1 id="2-网站的工作流程"><a href="#2-网站的工作流程" class="headerlink" title="2 网站的工作流程"></a>2 网站的工作流程</h1><p>接下来我们先来看看网站的工作流程，这样才能在我们的脑海中构建初步的知识架构体系。</p><p>1.首先我们需要通过<strong>浏览器</strong>访问发布到<strong>前端服务器</strong>中的<strong>前端程序</strong>，这时候前端程序会将前端代码返回给浏览器。如下图所示：</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667546920773.png"></p><p>2.浏览器得到前端代码，此时浏览器会将前端代码进行解析，然后展示到浏览器的窗口中，这时候我们就看到了<strong>网站</strong>的<strong>页面</strong>，如下图所示：</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667547421140.png"></p><p>3.但是此时这个页面是没有数据的，因为数据在我们的数据库中，所以我们浏览器需要根据<strong>前端代码中指定的后台服务器的地址</strong> 向 我们的<strong>后台服务器</strong>（内部有java程序）发起<strong>请求</strong>，后台服务器再去从<strong>数据库</strong>中获取数据，然后返回给浏览器。</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667547561387.png"></p><p>4.浏览器拿到后台返回的数据后，然后将数据展示在前端资源也就是<strong>网页</strong>上，然后我们就看到了如下图所示的完整的内容</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667547604517.png"></p><p><strong>整个流程如下：</strong></p><p>1.浏览器先向前端服务器请求<strong>前端资源</strong>，也就是我们所说的<strong>网页</strong></p><p>2.浏览器再向<strong>后台服务器</strong>发起请求，获取<strong>数据</strong></p><p>3.浏览器将得到的后台<strong>数据</strong>填充到<strong>网页</strong>上，然后展示给用户去看</p><h1 id="3-网站的开发模式"><a href="#3-网站的开发模式" class="headerlink" title="3 网站的开发模式"></a>3 网站的开发模式</h1><p>接下来我们来聊聊网站的开发模式，主要有2种：前端台分离和混合开发</p><p><strong>前后台分离</strong>：（<strong>目前企业开发的主流，</strong>市场占有率70%以上）这种开发模式的特点如下</p><ul><li><p>前端人员开发前端程序，前端程序单独部署到前端服务器上</p></li><li><p>后端人员开开发后端程序，后端程序单独部署到后端服务器上</p></li></ul><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667548530745.png"></p><p><strong>混合开发：</strong>（早期的开发技术，目前慢慢退出市场），这种开发模式的特点是：前端人员开发的代码和后端人员开发的代码在同一个项目中，一起打包部署。</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667548590602.png"></p><h1 id="4-网站的开发技术"><a href="#4-网站的开发技术" class="headerlink" title="4 网站的开发技术"></a>4 网站的开发技术</h1><p>最后我们来看看web阶段需要学习哪些技术呢？如下图我们列举了课程中需要学习的知识点</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667548969631.png"></p><p>以下是图表的方式整理了web阶段要学习的技术和其对应的作用</p><p>前端web开发：</p><table><thead><tr><th>技术</th><th>描述</th></tr></thead><tbody><tr><td>HTML</td><td>用于构建网站的基础结构的</td></tr><tr><td>css</td><td>用于美化页面的，作用和化妆或者整容作用一样</td></tr><tr><td>JavaScript</td><td>实现网页和用户的交互</td></tr><tr><td>Vue</td><td>主要用于将数据填充到html页面上的</td></tr><tr><td>Element</td><td>主要提供了一些非常美观的组件</td></tr><tr><td>Nginx</td><td>一款web服务器软件，可以用于部署我们的前端工程</td></tr></tbody></table><p>后端web开发：</p><table><thead><tr><th>技术</th><th>描述</th></tr></thead><tbody><tr><td>Maven</td><td>一款java中用于管理项目的软件</td></tr><tr><td>Mysql</td><td>最常用的一款数据库软件之一</td></tr><tr><td>SpringBoot</td><td>spring家族的产品，当前最为主流的项目开发技术。</td></tr><tr><td>Mybatis</td><td>用于操作数据库的框架</td></tr></tbody></table><p>所以只有学完上述的技术，才能开发出一个麻雀虽小，五脏俱全的网站。</p><p>​</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> web </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>linux基础命令笔记</title>
       <link href="/2023/06/30/Linux%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
       <url>/2023/06/30/Linux%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
@@ -407,6 +382,31 @@
         <tags>
             
             <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Web开发介绍</title>
+      <link href="/2023/06/30/Web%E5%BC%80%E5%8F%91%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2023/06/30/Web%E5%BC%80%E5%8F%91%E4%BB%8B%E7%BB%8D/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Web开发介绍"><a href="#Web开发介绍" class="headerlink" title="Web开发介绍"></a>Web开发介绍</h1><h1 id="1-什么是web开发"><a href="#1-什么是web开发" class="headerlink" title="1 什么是web开发"></a>1 什么是web开发</h1><p><strong>Web</strong>：全球广域网，也称为<strong>万维网</strong>(www <strong>W</strong>orld <strong>W</strong>ide <strong>W</strong>eb)，能够通过浏览器访问的<strong>网站</strong>。</p><p>所以<strong>Web开发</strong>说白了，就是<strong>开发网站</strong>的，例如下图所示的网站：<strong>淘宝</strong>，<strong>京东</strong>等等</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667546541068.png"></p><p>那么我们知道了web开发是开发网站的，那么我们需要学习哪些知识呢？以及这些知识在我们整个网站开发中占据什么位置呢？对于这些问题，我们就必须知道网站整体的工作流程。</p><h1 id="2-网站的工作流程"><a href="#2-网站的工作流程" class="headerlink" title="2 网站的工作流程"></a>2 网站的工作流程</h1><p>接下来我们先来看看网站的工作流程，这样才能在我们的脑海中构建初步的知识架构体系。</p><p>1.首先我们需要通过<strong>浏览器</strong>访问发布到<strong>前端服务器</strong>中的<strong>前端程序</strong>，这时候前端程序会将前端代码返回给浏览器。如下图所示：</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667546920773.png"></p><p>2.浏览器得到前端代码，此时浏览器会将前端代码进行解析，然后展示到浏览器的窗口中，这时候我们就看到了<strong>网站</strong>的<strong>页面</strong>，如下图所示：</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667547421140.png"></p><p>3.但是此时这个页面是没有数据的，因为数据在我们的数据库中，所以我们浏览器需要根据<strong>前端代码中指定的后台服务器的地址</strong> 向 我们的<strong>后台服务器</strong>（内部有java程序）发起<strong>请求</strong>，后台服务器再去从<strong>数据库</strong>中获取数据，然后返回给浏览器。</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667547561387.png"></p><p>4.浏览器拿到后台返回的数据后，然后将数据展示在前端资源也就是<strong>网页</strong>上，然后我们就看到了如下图所示的完整的内容</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667547604517.png"></p><p><strong>整个流程如下：</strong></p><p>1.浏览器先向前端服务器请求<strong>前端资源</strong>，也就是我们所说的<strong>网页</strong></p><p>2.浏览器再向<strong>后台服务器</strong>发起请求，获取<strong>数据</strong></p><p>3.浏览器将得到的后台<strong>数据</strong>填充到<strong>网页</strong>上，然后展示给用户去看</p><h1 id="3-网站的开发模式"><a href="#3-网站的开发模式" class="headerlink" title="3 网站的开发模式"></a>3 网站的开发模式</h1><p>接下来我们来聊聊网站的开发模式，主要有2种：前端台分离和混合开发</p><p><strong>前后台分离</strong>：（<strong>目前企业开发的主流，</strong>市场占有率70%以上）这种开发模式的特点如下</p><ul><li><p>前端人员开发前端程序，前端程序单独部署到前端服务器上</p></li><li><p>后端人员开开发后端程序，后端程序单独部署到后端服务器上</p></li></ul><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667548530745.png"></p><p><strong>混合开发：</strong>（早期的开发技术，目前慢慢退出市场），这种开发模式的特点是：前端人员开发的代码和后端人员开发的代码在同一个项目中，一起打包部署。</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667548590602.png"></p><h1 id="4-网站的开发技术"><a href="#4-网站的开发技术" class="headerlink" title="4 网站的开发技术"></a>4 网站的开发技术</h1><p>最后我们来看看web阶段需要学习哪些技术呢？如下图我们列举了课程中需要学习的知识点</p><p><img src="http://reggie-xiamou.oss-cn-beijing.aliyuncs.com/img/1667548969631.png"></p><p>以下是图表的方式整理了web阶段要学习的技术和其对应的作用</p><p>前端web开发：</p><table><thead><tr><th>技术</th><th>描述</th></tr></thead><tbody><tr><td>HTML</td><td>用于构建网站的基础结构的</td></tr><tr><td>css</td><td>用于美化页面的，作用和化妆或者整容作用一样</td></tr><tr><td>JavaScript</td><td>实现网页和用户的交互</td></tr><tr><td>Vue</td><td>主要用于将数据填充到html页面上的</td></tr><tr><td>Element</td><td>主要提供了一些非常美观的组件</td></tr><tr><td>Nginx</td><td>一款web服务器软件，可以用于部署我们的前端工程</td></tr></tbody></table><p>后端web开发：</p><table><thead><tr><th>技术</th><th>描述</th></tr></thead><tbody><tr><td>Maven</td><td>一款java中用于管理项目的软件</td></tr><tr><td>Mysql</td><td>最常用的一款数据库软件之一</td></tr><tr><td>SpringBoot</td><td>spring家族的产品，当前最为主流的项目开发技术。</td></tr><tr><td>Mybatis</td><td>用于操作数据库的框架</td></tr></tbody></table><p>所以只有学完上述的技术，才能开发出一个麻雀虽小，五脏俱全的网站。</p><p>​</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -443,9 +443,31 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[    <div id="aplayer-NhDXNeiw" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="147292559" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -465,31 +487,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[    <div id="aplayer-jvrfNzsz" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="147292559" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
